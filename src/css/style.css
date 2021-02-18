@@ -4,9 +4,9 @@
 .ant-layout-header {
     background: rgba(0, 0, 0, 0.2) !important;
     height: 68px;
-    -webkit-box-shadow: 0px -23px 14px 21px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px -23px 14px 21px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px -23px 14px 21px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0 -23px 14px 21px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 -23px 14px 21px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 -23px 14px 21px rgba(0, 0, 0, 0.75);
 }
 
 .bgheader {
@@ -70,18 +70,18 @@
     background-color: rgba(255, 255, 255, 0.3);
     border: none;
     border-radius: 3px;
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 .password {
     background-color: rgba(255, 255, 255, 0.3);
     border: none;
     border-radius: 3px;
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 .btnLogin {
@@ -94,9 +94,9 @@
     ) !important;
     background-color: rgba(0, 104, 199, 0.4) !important;
     font-family: "Nunito", sans-serif;
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4);
     transition: all 0.5s ease;
 }
 

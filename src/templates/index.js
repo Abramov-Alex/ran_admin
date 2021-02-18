@@ -4,8 +4,8 @@ import {Squash as Hamburger} from "hamburger-react";
 import {Parallax} from "react-scroll-parallax";
 import {VerticalAlignTopOutlined} from "@ant-design/icons";
 import {Pie, Bar, TimelineChart} from "ant-design-pro/lib/Charts";
-import {loadAnimation} from "lottie-web";
 import {defineLordIconElement} from "lord-icon-element";
+import {loadAnimation} from "lottie-web";
 import "antd/dist/antd.css";
 import "ant-design-pro/dist/ant-design-pro.css";
 import Ran1 from "../img/ran333.png";
@@ -295,7 +295,7 @@ function Index() {
                                     >
                                         <lord-icon
                                             class="bigDoc"
-                                            animation="hover"
+                                            trigger="hover"
                                             src="./icons/78-document-PDF-outline-edited.json"
                                         />
                                     </Col>
@@ -325,7 +325,7 @@ function Index() {
                                     >
                                         <lord-icon
                                             class="bigDoc"
-                                            animation="hover"
+                                            trigger="hover"
                                             src="./icons/80-document-DOC-outline-edited.json"
                                         />
                                     </Col>
@@ -390,7 +390,7 @@ function Index() {
                                 width="100%"
                                 height="428"
                                 title="map"
-                                frameborder="0"
+                                frameBorder="0"
                             />
                         </Col>
                     </Row>
@@ -413,7 +413,7 @@ function Index() {
                     <Col span={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
-                            animation="hover"
+                            trigger="hover"
                             src="./icons/19-magnifier-zoom-search-outline-edited.json"
                         />
                         <p className="underIcon">Поиск</p>
@@ -425,7 +425,7 @@ function Index() {
                     >
                         <lord-icon
                             class="big"
-                            animation="hover"
+                            trigger="hover"
                             src="./icons/152-bar-chart-arrow-growth-outline-edited.json"
                         />
                         <p className="underIcon">Аналитика</p>
@@ -433,7 +433,7 @@ function Index() {
                     <Col span={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
-                            animation="hover"
+                            trigger="hover"
                             src="./icons/312-avatar-Icon-calm-search-outline-edited.json"
                         />
                         <p className="underIcon">Кабинет</p>
@@ -441,7 +441,7 @@ function Index() {
                     <Col span={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
-                            animation="hover"
+                            trigger="hover"
                             src="./icons/39-gear-settings-single-outline-edited.json"
                         />
                         <p className="underIcon">Настройки</p>
@@ -451,7 +451,7 @@ function Index() {
                     <Col span={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
-                            animation="hover"
+                            trigger="hover"
                             src="./icons/60-documents-outline-edited.json"
                         />
                         <p className="underIcon">Формы</p>
@@ -459,7 +459,7 @@ function Index() {
                     <Col span={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
-                            animation="hover"
+                            trigger="hover"
                             src="./icons/245-edit-document-outline-edited.json"
                         />
                         <p className="underIcon">Редактирование</p>
@@ -467,7 +467,7 @@ function Index() {
                     <Col span={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
-                            animation="hover"
+                            trigger="hover"
                             src="./icons/403-museum-authority-outline-edited.json"
                         />
                         <p className="underIcon">Архив</p>
@@ -475,7 +475,7 @@ function Index() {
                     <Col span={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
-                            animation="hover"
+                            trigger="hover"
                             src="./icons/113-atom-outline-edited.json"
                         />
                         <p className="underIcon">Наука</p>
