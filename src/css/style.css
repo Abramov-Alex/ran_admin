@@ -24,7 +24,7 @@
     background-size: cover;
 }
 
-.coloredDiv {
+.divOne {
     background: linear-gradient(
             45deg,
             rgba(3, 0, 31, 0.9),
@@ -37,14 +37,14 @@
     z-index: 2;
 }
 
-.whiteDiv {
+.divTwo {
     background: white;
     min-height: 100vh;
 }
 
-.whiteSmokeDiv {
+.divThree {
     background: linear-gradient(
-            45deg, whitesmoke, #e4f2ff);
+            45deg, #dee4ff, #e4ffea);
     min-height: 100vh;
 }
 
@@ -136,6 +136,7 @@
 }
 
 .divNameOne {
+    margin-right: 10px;
     color: #32435e;
     font-size: 30px;
     font-weight: 700;
@@ -256,7 +257,7 @@ a:hover {
 }
 
 .bigDoc:hover {
-    background-color: #e4e4e4;
+    background-color: #4968882e;
     transition: all 1s ease;
 }
 
