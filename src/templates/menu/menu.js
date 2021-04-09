@@ -3,7 +3,6 @@ import {Layout, Row, Col, Anchor, Drawer, Button} from "antd";
 import {Squash as Hamburger} from "hamburger-react";
 import {defineLordIconElement} from "lord-icon-element";
 import {loadAnimation} from "lottie-web";
-import Tilt from "react-parallax-tilt";
 
 defineLordIconElement(loadAnimation);
 
@@ -66,22 +65,22 @@ function Menu() {
                         >
                             <Link
                                 className="nameMenu"
-                                href="#one"
+                                href="#login"
                                 title="Главная"
                             />
                             <Link
                                 className="nameMenu"
-                                href="#two"
+                                href="#statistics"
                                 title="Статистика"
                             />
                             <Link
                                 className="nameMenu"
-                                href="#three"
+                                href="#documents"
                                 title="Документы"
                             />
                             <Link
                                 className="nameMenu"
-                                href="#four"
+                                href="#contacts"
                                 title="Контакты"
                             />
                         </Anchor>

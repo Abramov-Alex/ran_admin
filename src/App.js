@@ -1,6 +1,6 @@
 import React from "react";
 import "antd/dist/antd.css";
-import "./css/style.css";
+import "./css/style.css"
 import Index from "./templates/index";
 
 export default function App() {
