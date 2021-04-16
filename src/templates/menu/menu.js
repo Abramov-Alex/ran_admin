@@ -1,6 +1,8 @@
 import React, {useState} from "react";
-import {Layout, Row, Col, Anchor, Drawer, Button} from "antd";
+import {Layout, Row, Col, Drawer, Button} from "antd";
 import {Squash as Hamburger} from "hamburger-react";
+import {Link} from "react-router-dom";
+import {NavHashLink} from 'react-router-hash-link';
 import {defineLordIconElement} from "lord-icon-element";
 import {loadAnimation} from "lottie-web";
 
@@ -8,6 +10,14 @@ defineLordIconElement(loadAnimation);
 
 function Menu() {
 
+    const scrollWithOffset = (el, offset) => {
+        const elementPosition = el.offsetTop - offset;
+        window.scroll({
+            top: elementPosition,
+            left: 0,
+            behavior: "smooth"
+        });
+    };
     const [visible, setVisible] = useState(false);
     const [childrenDrawer, setVisibleTwo] = useState(false);
     const onClose = () => {
@@ -16,7 +26,6 @@ function Menu() {
     const onChildrenDrawerClose = () => {
         setVisibleTwo(false);
     };
-    const {Link} = Anchor;
     const {Header} = Layout;
     const showDrawer = () => {
         setVisible(true);
@@ -34,7 +43,7 @@ function Menu() {
                 }}
             >
                 <Row>
-                    <Col span={2} className="headerBurger">
+                    <Col xs={3} sm={3} md={2} lg={2} xl={2} className="headerBurger">
                         <Hamburger
                             rounded
                             color="white"
@@ -51,39 +60,17 @@ function Menu() {
                             }}
                         />
                     </Col>
-                    <Col span={14}>
+                    <Col xs={0} sm={0} md={10} lg={12} xl={14}>
                         <p className="nameMain">
                             <span className="nameOne">ИС НМРиЭД</span>{" "}
                             <span className="nameTwo">РАН</span>
                         </p>
                     </Col>
-                    <Col span={8}>
-                        <Anchor
-                            offsetTop={70}
-                            affix={false}
-                            showInkInFixed={false}
-                        >
-                            <Link
-                                className="nameMenu"
-                                href="#login"
-                                title="Главная"
-                            />
-                            <Link
-                                className="nameMenu"
-                                href="#statistics"
-                                title="Статистика"
-                            />
-                            <Link
-                                className="nameMenu"
-                                href="#documents"
-                                title="Документы"
-                            />
-                            <Link
-                                className="nameMenu"
-                                href="#contacts"
-                                title="Контакты"
-                            />
-                        </Anchor>
+                    <Col xs={21} sm={21} md={12} lg={10} xl={8} className="menuAnchor">
+                        <NavHashLink activeClassName="selected" smooth to="/#login">Главная</NavHashLink>
+                        <NavHashLink scroll={el => scrollWithOffset(el, 68)} activeClassName="selected" smooth to="/#statistics">Статистика</NavHashLink>
+                        <NavHashLink scroll={el => scrollWithOffset(el, 68)} activeClassName="selected" smooth to="/#documents">Документы</NavHashLink>
+                        <NavHashLink scroll={el => scrollWithOffset(el, 68)} activeClassName="selected" smooth to="/#contacts">Контакты</NavHashLink>
                     </Col>
                 </Row>
             </Header>
@@ -122,12 +109,14 @@ function Menu() {
                         <p className="underIcon">Аналитика</p>
                     </Col>
                     <Col span={6} style={{textAlign: "center"}}>
-                        <lord-icon
-                            class="big"
-                            trigger="hover"
-                            src="./icons/312-avatar-Icon-calm-search-outline-edited.json"
-                        />
-                        <p className="underIcon">Кабинет</p>
+                        <Link to="/admin">
+                            <lord-icon
+                                class="big"
+                                trigger="hover"
+                                src="./icons/312-avatar-Icon-calm-search-outline-edited.json"
+                            />
+                            <p className="underIcon">Кабинет</p>
+                        </Link>
                     </Col>
                     <Col span={6} style={{textAlign: "center"}}>
                         <lord-icon

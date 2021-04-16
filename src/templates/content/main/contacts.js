@@ -1,6 +1,9 @@
 import React, {Component} from "react";
 import {Layer} from "react-parallax-scroll";
 import {Col, Row} from "antd";
+import address from "../../../img/address.png"
+import phone from "../../../img/phone.png"
+import fax from "../../../img/fax.png"
 
 export default class Contacts extends Component {
     render() {
@@ -24,12 +27,36 @@ export default class Contacts extends Component {
                 </Layer>
                 <Row justify="center">
                     <Col span="18">
-                        <Row style={{marginTop: "40px"}}>
-                            <Col span={24} style={{height: "35vh"}}>
-                            </Col>
-                        </Row>
+                        <Layer settings={{speed: 0.1, type: 'translateY'}}>
+                            <Row justify="center" style={{marginTop: "40px"}} >
+                                <Col span={3} style={{textAlign: "center"}}>
+                                    <img alt="?" src={address} />
+                                </Col>
+                                <Col span={9}>
+                                    <p className="contacts">Адрес:<br/>119991 Москва, Ленинский просп., 14</p>
+                                </Col>
+                            </Row>
+                            <Row justify="center" style={{marginTop: "20px"}}>
+                                <Col span={3} style={{textAlign: "center"}}>
+                                    <img alt="?" src={phone} />
+                                </Col>
+                                <Col span={9}>
+                                    <p className="contacts">Телефон:<br/>8 (495) 938-03-09 (Справ. бюро)</p>
+                                </Col>
+                            </Row>
+                            <Row justify="center" style={{marginTop: "20px"}}>
+                                <Col span={3} style={{textAlign: "center"}}>
+                                    <img alt="?" src={fax} />
+                                </Col>
+                                <Col span={9}>
+                                    <p className="contacts">Факсы:<br/>8 (495) 954-33-20 (Ленинский просп., 14)</p>
+                                    <p className="contacts">8 (495) 938-18-44 (Ленинский просп., 32а)</p>
+                                </Col>
+                            </Row>
+                        </Layer>
                     </Col>
                 </Row>
+                <br/><br/>
                 <Row justify="space-between" align="bottom">
                     <Col span={24}>
                         <iframe

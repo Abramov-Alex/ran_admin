@@ -35,17 +35,26 @@
     min-height: 100vh;
     position: relative;
     z-index: 2;
+    /*-webkit-box-shadow: 0 -23px 14px 21px rgba(0, 0, 0, 0.75);*/
+    /*-moz-box-shadow: 0 -23px 14px 21px rgba(0, 0, 0, 0.75);*/
+    /*box-shadow: 0 -23px 14px 21px rgba(0, 0, 0, 0.75);*/
 }
 
 .divTwo {
     background: white;
     min-height: 100vh;
+    /*-webkit-box-shadow: 0 -23px 14px 21px rgba(0, 0, 0, 0.75);*/
+    /*-moz-box-shadow: 0 -23px 14px 21px rgba(0, 0, 0, 0.75);*/
+    /*box-shadow: 0 -23px 14px 21px rgba(0, 0, 0, 0.75);*/
 }
 
 .divThree {
     background: linear-gradient(
             45deg, #dee4ff, #e4ffea);
     min-height: 100vh;
+    /*-webkit-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.25);*/
+    /*-moz-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.25);*/
+    /*box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.25);*/
 }
 
 .beigeDiv {
@@ -170,33 +179,20 @@
     background-color: rgba(27, 27, 27, 0.95);
 }
 
-.ant-anchor-wrapper {
-    background-color: transparent;
-}
-
-.ant-anchor {
+.menuAnchor {
     display: flex;
 }
 
-.ant-anchor-link {
-    padding: 0;
-    flex: 1;
+.menuAnchor a {
     height: 68px;
-    transition: all 0.3s ease;
-}
-
-.ant-anchor-ink::before {
-    display: none;
-}
-
-.ant-anchor-link-title {
+    text-align: center;
+    flex: 1;
     color: white;
-    height: 100%;
-    padding-top: 22px;
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
 }
 
-.ant-anchor-link-active > .ant-anchor-link-title,
-.ant-anchor-link > .ant-anchor-link-title:hover {
+.menuAnchor a:hover {
     background: -webkit-linear-gradient(
             45deg,
             rgba(59, 179, 85, 1),
@@ -207,14 +203,15 @@
     transition: all 0.3s ease;
 }
 
-.ant-anchor-link-active,
-.ant-anchor-link:hover {
-    background-color: rgba(27, 27, 27, 0.1);
+.menuAnchor .selected {
+    background: -webkit-linear-gradient(
+            45deg,
+            rgba(59, 179, 85, 1),
+            rgba(13, 139, 255, 1)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition: all 0.3s ease;
-}
-
-a:hover {
-    color: white;
 }
 
 .ant-back-top {
@@ -269,4 +266,25 @@ a:hover {
     transition: all 0.3s ease;
     width: 230px !important;
     height: 230px !important;
+}
+
+.contacts {
+    color: #32435e;
+    font-size: 21px;
+    font-weight: 100;
+    font-family: "Nunito", sans-serif;
+}
+
+.siderMenu {
+    background-color: transparent;
+    color: white;
+}
+
+.siderMenu .ant-menu-sub.ant-menu-inline {
+    background-color: transparent;
+    color: white;
+}
+
+.siderMenu.ant-menu-inline {
+    border-right: none;
 }
