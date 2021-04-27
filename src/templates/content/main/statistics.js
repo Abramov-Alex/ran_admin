@@ -49,9 +49,9 @@ export default class Statistics extends Component {
     render() {
         return(
             <div id="statistics" className="divTwo">
-                <Row justify="center">
-                    <Col span={18}>
-                        <Layer settings={{speed: 0.06, type: 'translateX'}}>
+                <Layer settings={{speed: 0.06, type: 'translateX'}}>
+                    <Row justify="center">
+                        <Col span="18">
                             <Row style={{marginTop: "40px"}}>
                                 <Col span={24}>
                                     <span className="divNameOne">
@@ -62,10 +62,14 @@ export default class Statistics extends Component {
                                     </span>
                                 </Col>
                             </Row>
-                        </Layer>
+                        </Col>
+                    </Row>
+                </Layer>
+                <Row justify="center">
+                    <Col span={18}>
                         <Layer settings={{speed: -0.1, type: 'translateY'}}>
                             <Row>
-                                <Col xs={22} sm={22} md={22} lg={22} xl={11} style={{marginTop: "40px"}}>
+                                <Col xs={23} sm={22} md={22} lg={22} xl={11} style={{marginTop: "40px"}}>
                                     <Pie
                                         hasLegend
                                         subTitle="Всего"
@@ -91,7 +95,7 @@ export default class Statistics extends Component {
                                         height={260}
                                     />
                                 </Col>
-                                <Col xs={21} sm={21} md={21} lg={21} xl={10} offset={2}>
+                                <Col xs={23} sm={23} md={21} lg={21} xl={10} offset={2}>
                                     <TimelineChart
                                         height={260}
                                         data={chartData}

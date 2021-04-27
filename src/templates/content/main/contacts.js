@@ -26,29 +26,29 @@ export default class Contacts extends Component {
                     </Row>
                 </Layer>
                 <Row justify="center">
-                    <Col span="18">
+                    <Col xs={23} sm={22} md={20} lg={18} xl={18}>
                         <Layer settings={{speed: 0.1, type: 'translateY'}}>
                             <Row justify="center" style={{marginTop: "40px"}} >
-                                <Col span={3} style={{textAlign: "center"}}>
-                                    <img alt="?" src={address} />
+                                <Col xs={6} sm={6} md={5} lg={5} xl={4} style={{textAlign: "center"}}>
+                                    <img className="contactsImg" alt="?" src={address} />
                                 </Col>
-                                <Col span={9}>
+                                <Col xs={18} sm={18} md={15} lg={14} xl={10}>
                                     <p className="contacts">Адрес:<br/>119991 Москва, Ленинский просп., 14</p>
                                 </Col>
                             </Row>
                             <Row justify="center" style={{marginTop: "20px"}}>
-                                <Col span={3} style={{textAlign: "center"}}>
-                                    <img alt="?" src={phone} />
+                                <Col xs={6} sm={6} md={5} lg={5} xl={4} style={{textAlign: "center"}}>
+                                    <img className="contactsImg" alt="?" src={phone} />
                                 </Col>
-                                <Col span={9}>
+                                <Col xs={18} sm={18} md={15} lg={14} xl={10}>
                                     <p className="contacts">Телефон:<br/>8 (495) 938-03-09 (Справ. бюро)</p>
                                 </Col>
                             </Row>
                             <Row justify="center" style={{marginTop: "20px"}}>
-                                <Col span={3} style={{textAlign: "center"}}>
-                                    <img alt="?" src={fax} />
+                                <Col xs={6} sm={6} md={5} lg={5} xl={4} style={{textAlign: "center"}}>
+                                    <img className="contactsImg" alt="?" src={fax} />
                                 </Col>
-                                <Col span={9}>
+                                <Col xs={18} sm={18} md={15} lg={14} xl={10}>
                                     <p className="contacts">Факсы:<br/>8 (495) 954-33-20 (Ленинский просп., 14)</p>
                                     <p className="contacts">8 (495) 938-18-44 (Ленинский просп., 32а)</p>
                                 </Col>

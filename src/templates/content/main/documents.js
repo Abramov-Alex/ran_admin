@@ -4,8 +4,8 @@ import {Layer} from "react-parallax-scroll";
 import Tilt from "react-parallax-tilt";
 
 const bigDoc = {
-    width: 220,
-    height: 220,
+    width: 170,
+    height: 170,
     background: "#d0dce8"
 }
 
@@ -13,9 +13,9 @@ export default class Documents extends Component {
     render() {
         return(
             <div id="documents" className="divThree">
-                <Row justify="center">
-                    <Col span={18}>
-                        <Layer settings={{speed: 0.06, type: 'translateX'}}>
+                <Layer settings={{speed: 0.06, type: 'translateX'}}>
+                    <Row justify="center">
+                        <Col span="18">
                             <Row style={{marginTop: "40px"}}>
                                 <Col span={24}>
                                     <span className="divNameOne">
@@ -26,18 +26,16 @@ export default class Documents extends Component {
                                     </span>
                                 </Col>
                             </Row>
-                        </Layer>
-                        <br/><br/><br/><br/><br/>
-                        <Layer settings={{speed: 0.2, type: 'translateY'}}>
-                            <Row
-                                style={{
-                                    height: "35vh",
-                                    marginTop: "50px",
-                                }}
-                            >
+                        </Col>
+                    </Row>
+                </Layer>
+                <Row justify="center">
+                    <Col xs={23} sm={22} md={20} lg={18} xl={18}>
+                        <Layer settings={{speed: -0.05, type: 'translateX'}}>
+                            <Row style={{minHeight: '200px', margin: '70px 0 50px'}}>
                                 <Col
-                                    xs={24} sm={24} md={24} lg={8} xl={5}
-                                    style={{textAlign: "center"}}
+                                    xs={24} sm={24} md={24} lg={8} xl={6}
+                                    style={{textAlign: "center", marginBottom: "20px"}}
                                 >
                                     <Tilt scale={1.1} transitionSpeed={2500}>
                                         <lord-icon
@@ -48,12 +46,11 @@ export default class Documents extends Component {
                                     </Tilt>
                                 </Col>
                                 <Col
-                                    xs={24} sm={24} md={24} lg={16} xl={19}
-                                    style={{textAlign: "left"}}
+                                    xs={24} sm={24} md={24} lg={16} xl={18}
+                                    style={{textAlign: "center", marginBottom: "20px"}}
                                 >
                                     <p
                                         className="underIconDoc"
-                                        style={{marginTop: "65px"}}
                                     >
                                         Федеральный закон "О Российской
                                         академии наук, реорганизации
@@ -64,9 +61,9 @@ export default class Documents extends Component {
                                     </p>
                                 </Col>
                             </Row>
-                            <Row style={{height: "40vh"}}>
+                            <Row style={{minHeight: '200px', margin: '50px 0 50px'}}>
                                 <Col
-                                    xs={24} sm={24} md={24} lg={8} xl={5}
+                                    xs={24} sm={24} md={24} lg={8} xl={6}
                                     style={{textAlign: "center"}}
                                 >
                                     <Tilt scale={1.1} transitionSpeed={2500}>
@@ -78,12 +75,49 @@ export default class Documents extends Component {
                                     </Tilt>
                                 </Col>
                                 <Col
-                                    xs={24} sm={24} md={24} lg={16} xl={19}
+                                    xs={24} sm={24} md={24} lg={16} xl={18}
                                     style={{textAlign: "left"}}
                                 >
                                     <p
                                         className="underIconDoc"
-                                        style={{marginTop: "10px"}}
+                                    >
+                                        Постановление Правительства РФ от
+                                        30.12.2018 №1781 "Об осуществлении
+                                        федеральным государственным
+                                        бюджетным учреждением "Российская
+                                        академия наук" научного и научно-
+                                        методического руководства научной и
+                                        научно-технической деятельностью
+                                        научных организаций и
+                                        образовательных организаций высшего
+                                        образования, а также экспертизы
+                                        научных и научно-технических
+                                        результатов, полученных этими
+                                        организациями, и о внесении
+                                        изменений в некоторые акты
+                                        Правительства Российской Федерации"
+                                    </p>
+                                </Col>
+                            </Row>
+                            <Row style={{minHeight: '200px', margin: '50px 0 50px'}}>
+                                <Col
+                                    xs={24} sm={24} md={24} lg={8} xl={6}
+                                    style={{textAlign: "center", marginBottom: "20px"}}
+                                >
+                                    <Tilt scale={1.1} transitionSpeed={2500}>
+                                        <lord-icon
+                                            style={bigDoc}
+                                            trigger="hover"
+                                            src="./icons/78-document-PDF-outline-edited.json"
+                                        />
+                                    </Tilt>
+                                </Col>
+                                <Col
+                                    xs={24} sm={24} md={24} lg={16} xl={18}
+                                    style={{textAlign: "left"}}
+                                >
+                                    <p
+                                        className="underIconDoc"
                                     >
                                         Постановление Правительства РФ от
                                         30.12.2018 №1781 "Об осуществлении

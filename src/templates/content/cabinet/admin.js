@@ -1,65 +1,198 @@
-import React from "react";
-import {Row, Col, Menu} from "antd";
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import React, {Component} from "react";
+import {Row, Col, Layout, Menu, Affix, Input, DatePicker, Button} from "antd";
+import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+import TableExample from '../cabinet/table'
+import {Pie} from "ant-design-pro/lib/Charts";
 
 const { SubMenu } = Menu;
-const rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
+const { Content, Sider } = Layout;
+const salesPieData = [
+    {
+        x: "2015",
+        y: 4544,
+    },
+    {
+        x: "2016",
+        y: 3321,
+    },
+    {
+        x: "2017",
+        y: 3113,
+    },
+    {
+        x: "2018",
+        y: 2341,
+    },
+    {
+        x: "2019",
+        y: 1231,
+    },
+    {
+        x: "2020",
+        y: 1231,
+    },
+];
 
-function Admin() {
+export default class Admin extends Component {
 
-        const [openKeys, setOpenKeys] = React.useState(['sub1']);
+    state = {
+        collapsed: false,
+    };
+    onCollapse = collapsed => {
+        console.log(collapsed);
+        this.setState({ collapsed });
+    };
 
-        const onOpenChange = keys => {
-            const latestOpenKey = keys.find(key => openKeys.indexOf(key) === -1);
-            if (rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
-                setOpenKeys(keys);
-            } else {
-                setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
-            }
-        };
-
+    render() {
+        const { collapsed } = this.state;
         return(
-            <div style={{background: '#1f232b', height: '100vh'}}>
-                <br/><br/><br/><br/><br/>
-                <Row justify="center">
-                    <Col span={23}>
-                        <Row gutter={16}>
-                            <Col span={4}>
-                                <div style={{background: '#313640', height: '85vh'}}>
-                                    <Menu className="siderMenu" mode="inline" openKeys={openKeys} onOpenChange={onOpenChange} style={{ width: '100%'}}>
-                                        <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
-                                            <Menu.Item key="1">Option 1</Menu.Item>
-                                            <Menu.Item key="2">Option 2</Menu.Item>
-                                            <Menu.Item key="3">Option 3</Menu.Item>
-                                            <Menu.Item key="4">Option 4</Menu.Item>
-                                        </SubMenu>
-                                        <SubMenu key="sub2" icon={<AppstoreOutlined />} title="Navigation Two">
-                                            <Menu.Item key="5">Option 5</Menu.Item>
-                                            <Menu.Item key="6">Option 6</Menu.Item>
-                                            <SubMenu key="sub3" title="Submenu">
-                                                <Menu.Item key="7">Option 7</Menu.Item>
-                                                <Menu.Item key="8">Option 8</Menu.Item>
-                                            </SubMenu>
-                                        </SubMenu>
-                                        <SubMenu key="sub4" icon={<SettingOutlined />} title="Navigation Three">
-                                            <Menu.Item key="9">Option 9</Menu.Item>
-                                            <Menu.Item key="10">Option 10</Menu.Item>
-                                            <Menu.Item key="11">Option 11</Menu.Item>
-                                            <Menu.Item key="12">Option 12</Menu.Item>
-                                        </SubMenu>
-                                    </Menu>
-                                </div>
-                            </Col>
-                            <Col span={20}>
-                                <div style={{background: '#313640', height: '85vh'}}>
-
-                                </div>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Row>
+            <div style={{background: '#f0f2f5'}}>
+                <br/><br/><br/><br/>
+                <Layout style={{background: '#f0f2f5', minHeight: '89vh'}}>
+                    <Sider
+                        width={230}
+                        collapsible
+                        collapsed={collapsed}
+                        onCollapse={this.onCollapse}>
+                        <div className="userName">Абрамов А.А.</div>
+                        <Affix offsetTop={75}>
+                            <Menu
+                                mode="inline"
+                                defaultSelectedKeys={['1']}
+                                defaultOpenKeys={['sub1']}
+                                style={{borderRight: 0, fontFamily: 'Nunito'}}
+                            >
+                                <SubMenu key="sub1" icon={<UserOutlined />} title="Личный кабинет">
+                                    <Menu.Item key="1">Проект тематик</Menu.Item>
+                                    <Menu.Item key="2">Планы тематик</Menu.Item>
+                                    <Menu.Item key="3">Отчеты НИР</Menu.Item>
+                                    <Menu.Item key="4">Архивы файлов</Menu.Item>
+                                </SubMenu>
+                                <SubMenu key="sub2" icon={<LaptopOutlined />} title="subnav 2">
+                                    <Menu.Item key="5">option5</Menu.Item>
+                                    <Menu.Item key="6">option6</Menu.Item>
+                                    <Menu.Item key="7">option7</Menu.Item>
+                                    <Menu.Item key="8">option8</Menu.Item>
+                                </SubMenu>
+                                <SubMenu key="sub3" icon={<NotificationOutlined />} title="subnav 3">
+                                    <Menu.Item key="9">option9</Menu.Item>
+                                    <Menu.Item key="10">option10</Menu.Item>
+                                    <Menu.Item key="11">option11</Menu.Item>
+                                    <Menu.Item key="12">option12</Menu.Item>
+                                </SubMenu>
+                            </Menu>
+                        </Affix>
+                    </Sider>
+                    <Layout style={{ padding: '0px 0px 0px 20px' }}>
+                        <Content
+                            className="site-layout-background"
+                            style={{
+                                paddingRight: 17,
+                                margin: 0,
+                                minHeight: '90.5vh',
+                            }}
+                        >
+                            <Row gutter={20}>
+                                <Col xs={24} sm={24} md={24} lg={24} xl={12}>
+                                    <div className="whiteDiv">
+                                        <Row gutter={10}>
+                                            <Col span={24}>
+                                                <p className="titleWhiteDiv">Фильтры</p>
+                                            </Col>
+                                        </Row>
+                                        <Row gutter={10}>
+                                            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                                                <label>Статус</label>
+                                                <Input placeholder="..."/>
+                                            </Col>
+                                            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                                                <label>Организация</label>
+                                                <Input placeholder="..."/>
+                                            </Col>
+                                        </Row>
+                                        <Row gutter={10}>
+                                            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                                                <label>Заявитель</label>
+                                                <Input placeholder="..."/>
+                                            </Col>
+                                            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                                                <label>ИНН</label>
+                                                <Input placeholder="..."/>
+                                            </Col>
+                                        </Row>
+                                        <Row gutter={10}>
+                                            <Col span={24}>
+                                                <label>Наименование</label>
+                                                <Input placeholder="..."/>
+                                            </Col>
+                                        </Row>
+                                        <Row gutter={10}>
+                                            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                                                <label>Дата</label>
+                                                <DatePicker placeholder="..." style={{width: '100%'}}/>
+                                            </Col>
+                                            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                                                <label>Дата</label>
+                                                <DatePicker placeholder="..." style={{width: '100%'}}/>
+                                            </Col>
+                                        </Row>
+                                        <Row gutter={10} style={{marginTop: '10px'}}>
+                                            <Col xs={24} sm={12} md={12} lg={12} xl={12}>
+                                                <Button style={{width: '100%'}} type="primary">
+                                                    Сформировать
+                                                </Button>
+                                            </Col>
+                                            <Col xs={24} sm={12} md={12} lg={12} xl={12}>
+                                                <Button style={{width: '100%'}} type="primary" danger>Очистить</Button>
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                </Col>
+                                <Col xs={24} sm={24} md={24} lg={24} xl={12}>
+                                    <div className="whiteDiv">
+                                        <Row gutter={10}>
+                                            <Col span={24}>
+                                                <p className="titleWhiteDiv">Статистика</p>
+                                            </Col>
+                                        </Row>
+                                        <Pie
+                                            hasLegend
+                                            subTitle="Всего"
+                                            total={() => (
+                                                <span
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: salesPieData.reduce(
+                                                            (pre, now) =>
+                                                                now.y + pre,
+                                                            0
+                                                        ),
+                                                    }}
+                                                />
+                                            )}
+                                            data={salesPieData}
+                                            valueFormat={(val) => (
+                                                <span
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: val,
+                                                    }}
+                                                />
+                                            )}
+                                            height={250}
+                                        />
+                                    </div>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col span={24}>
+                                    <div className="whiteDiv">
+                                        <TableExample/>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Content>
+                    </Layout>
+                </Layout>
             </div>
         )
+    }
 }
-
-export default Admin;

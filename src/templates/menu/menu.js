@@ -19,18 +19,18 @@ function Menu() {
         });
     };
     const [visible, setVisible] = useState(false);
-    const [childrenDrawer, setVisibleTwo] = useState(false);
     const onClose = () => {
         setVisible(false);
-    };
-    const onChildrenDrawerClose = () => {
-        setVisibleTwo(false);
     };
     const {Header} = Layout;
     const showDrawer = () => {
         setVisible(true);
     };
     const [isOpen, setOpen] = useState(false);
+    const menuIcon = {
+        width: 55,
+        height: 55
+    }
 
     return (
         <>
@@ -66,11 +66,32 @@ function Menu() {
                             <span className="nameTwo">РАН</span>
                         </p>
                     </Col>
-                    <Col xs={21} sm={21} md={12} lg={10} xl={8} className="menuAnchor">
-                        <NavHashLink activeClassName="selected" smooth to="/#login">Главная</NavHashLink>
-                        <NavHashLink scroll={el => scrollWithOffset(el, 68)} activeClassName="selected" smooth to="/#statistics">Статистика</NavHashLink>
-                        <NavHashLink scroll={el => scrollWithOffset(el, 68)} activeClassName="selected" smooth to="/#documents">Документы</NavHashLink>
-                        <NavHashLink scroll={el => scrollWithOffset(el, 68)} activeClassName="selected" smooth to="/#contacts">Контакты</NavHashLink>
+                    {/*-------For logged in users-------*/}
+                    {/*<Col xs={21} sm={21} md={12} lg={10} xl={8} className="menuAnchor">*/}
+                    {/*    <NavHashLink activeClassName="selected" smooth to="/#login">Главная</NavHashLink>*/}
+                    {/*    <NavHashLink scroll={el => scrollWithOffset(el, 68)} activeClassName="selected" smooth to="/#statistics">Статистика</NavHashLink>*/}
+                    {/*    <NavHashLink scroll={el => scrollWithOffset(el, 68)} activeClassName="selected" smooth to="/#documents">Документы</NavHashLink>*/}
+                    {/*    <NavHashLink scroll={el => scrollWithOffset(el, 68)} activeClassName="selected" smooth to="/#contacts">Контакты</NavHashLink>*/}
+                    {/*</Col>*/}
+
+                    {/*-------For logged out users-------*/}
+                    <Col xs={21} sm={21} md={12} lg={10} xl={8} className="menuIcons">
+                        <Row>
+                            <Col span={4} offset={16} className="menuBtn">
+                                <lord-icon
+                                    style={menuIcon}
+                                    trigger="morph"
+                                    src="./icons/32-arrow-left-outline.json"
+                                />
+                            </Col>
+                            <Col span={4} className="menuBtn">
+                                <lord-icon
+                                    style={menuIcon}
+                                    trigger="hover"
+                                    src="./icons/313-two-avatar-icon-calm-outline.json"
+                                />
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
             </Header>
@@ -87,8 +108,8 @@ function Menu() {
                 <br/>
                 <br/>
                 <br/>
-                <Row style={{height: "40vh"}}>
-                    <Col span={6} style={{textAlign: "center"}}>
+                <Row style={{minHeight: "40vh"}}>
+                    <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
                             trigger="hover"
@@ -97,7 +118,7 @@ function Menu() {
                         <p className="underIcon">Поиск</p>
                     </Col>
                     <Col
-                        span={6}
+                        xs={12} sm={12} md={12} lg={6} xl={6}
                         className="divIcon"
                         style={{textAlign: "center"}}
                     >
@@ -108,7 +129,7 @@ function Menu() {
                         />
                         <p className="underIcon">Аналитика</p>
                     </Col>
-                    <Col span={6} style={{textAlign: "center"}}>
+                    <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
                         <Link to="/admin">
                             <lord-icon
                                 class="big"
@@ -118,7 +139,7 @@ function Menu() {
                             <p className="underIcon">Кабинет</p>
                         </Link>
                     </Col>
-                    <Col span={6} style={{textAlign: "center"}}>
+                    <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
                             trigger="hover"
@@ -127,8 +148,8 @@ function Menu() {
                         <p className="underIcon">Настройки</p>
                     </Col>
                 </Row>
-                <Row style={{height: "40vh"}}>
-                    <Col span={6} style={{textAlign: "center"}}>
+                <Row style={{minHeight: "40vh"}}>
+                    <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
                             trigger="hover"
@@ -136,7 +157,7 @@ function Menu() {
                         />
                         <p className="underIcon">Формы</p>
                     </Col>
-                    <Col span={6} style={{textAlign: "center"}}>
+                    <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
                             trigger="hover"
@@ -144,7 +165,7 @@ function Menu() {
                         />
                         <p className="underIcon">Редактирование</p>
                     </Col>
-                    <Col span={6} style={{textAlign: "center"}}>
+                    <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
                             trigger="hover"
@@ -152,7 +173,7 @@ function Menu() {
                         />
                         <p className="underIcon">Архив</p>
                     </Col>
-                    <Col span={6} style={{textAlign: "center"}}>
+                    <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
                             trigger="hover"
@@ -161,20 +182,6 @@ function Menu() {
                         <p className="underIcon">Наука</p>
                     </Col>
                 </Row>
-                {/*<Button type="primary" onClick={showChildrenDrawer}>
-                    Пункт 1
-                </Button>*/}
-                <Drawer
-                    title="Подпункты"
-                    placement="top"
-                    closable={true}
-                    onClose={onChildrenDrawerClose}
-                    visible={childrenDrawer}
-                >
-                    <Button type="primary" onClick={onChildrenDrawerClose}>
-                        Пункт 1.1
-                    </Button>
-                </Drawer>
             </Drawer>
         </>
     )
