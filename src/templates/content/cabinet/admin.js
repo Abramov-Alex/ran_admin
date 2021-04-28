@@ -1,11 +1,14 @@
 import React, {Component} from "react";
-import {Row, Col, Layout, Menu, Affix, Input, DatePicker, Button} from "antd";
+import {Row, Col, Layout, Menu, Affix, Input, Select, DatePicker, Button, ConfigProvider} from "antd";
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+import 'moment/locale/ru';
+import ruRU from 'antd/lib/locale/ru_RU';
 import TableExample from '../cabinet/table'
 import {Pie} from "ant-design-pro/lib/Charts";
 
 const { SubMenu } = Menu;
 const { Content, Sider } = Layout;
+const { Option } = Select;
 const salesPieData = [
     {
         x: "2015",
@@ -103,37 +106,49 @@ export default class Admin extends Component {
                                         <Row gutter={10}>
                                             <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                                                 <label>Статус</label>
-                                                <Input placeholder="..."/>
+                                                <Select style={{ width: '100%' }} placeholder="..." allowClear>
+                                                    <Option value="1">Сохранено</Option>
+                                                    <Option value="2">Возвращено</Option>
+                                                    <Option value="3">Черновик</Option>
+                                                </Select>
                                             </Col>
                                             <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                                                 <label>Организация</label>
-                                                <Input placeholder="..."/>
+                                                <Select style={{ width: '100%' }} placeholder="..." allowClear>
+                                                    <Option value="1">1 ...</Option>
+                                                    <Option value="2">2 ...</Option>
+                                                    <Option value="3">3 ...</Option>
+                                                </Select>
                                             </Col>
                                         </Row>
                                         <Row gutter={10}>
                                             <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                                                 <label>Заявитель</label>
-                                                <Input placeholder="..."/>
+                                                <Input placeholder="..." allowClear/>
                                             </Col>
                                             <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                                                 <label>ИНН</label>
-                                                <Input placeholder="..."/>
+                                                <Input placeholder="..." allowClear/>
                                             </Col>
                                         </Row>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <label>Наименование</label>
-                                                <Input placeholder="..."/>
+                                                <Input placeholder="..." allowClear/>
                                             </Col>
                                         </Row>
                                         <Row gutter={10}>
                                             <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                                                 <label>Дата</label>
-                                                <DatePicker placeholder="..." style={{width: '100%'}}/>
+                                                <ConfigProvider locale={ruRU}>
+                                                    <DatePicker placeholder="..." style={{width: '100%'}} allowClear/>
+                                                </ConfigProvider>
                                             </Col>
                                             <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                                                 <label>Дата</label>
-                                                <DatePicker placeholder="..." style={{width: '100%'}}/>
+                                                <ConfigProvider locale={ruRU}>
+                                                    <DatePicker placeholder="..." style={{width: '100%'}} allowClear/>
+                                                </ConfigProvider>
                                             </Col>
                                         </Row>
                                         <Row gutter={10} style={{marginTop: '10px'}}>
