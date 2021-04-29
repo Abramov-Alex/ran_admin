@@ -6,8 +6,9 @@ body {
 }
 
 .ant-layout-header {
+    line-height: 2.5;
     background: rgba(0, 0, 0, 0.2) !important;
-    height: 68px;
+    height: 55px;
     -webkit-box-shadow: 0 -23px 14px 21px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0 -23px 14px 21px rgba(0, 0, 0, 0.75);
     box-shadow: 0 -23px 14px 21px rgba(0, 0, 0, 0.75);
@@ -15,7 +16,7 @@ body {
 
 .bgheader {
     background-color: black;
-    height: 68px;
+    height: 55px;
     width: 105%;
     z-index: 3;
     position: fixed;
@@ -122,25 +123,34 @@ body {
 }
 
 .headerBurger {
-    padding: 10px 15px;
+    padding: 3px 15px;
 }
 
 .nameMain {
-    margin-top: 3px;
+    margin-top: -3px;
 }
 
 .nameOne {
     color: white;
-    font-size: 27px;
+    font-size: 25px;
     font-weight: 100;
     font-family: "Nunito", sans-serif;
 }
 
 .nameTwo {
     color: white;
-    font-size: 27px;
+    font-size: 25px;
     font-weight: 700;
     font-family: "Nunito", sans-serif;
+}
+
+.cabinetName {
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: "Nunito", sans-serif;
+    text-transform: uppercase;
 }
 
 .divNameOne {
@@ -241,8 +251,8 @@ body {
 }
 
 .big {
-    width: 170px !important;
-    height: 170px !important;
+    width: 150px !important;
+    height: 150px !important;
     transition: all 0.3s ease;
 }
 
@@ -270,8 +280,8 @@ body {
 .big:hover {
     background-color: #16181a;
     transition: all 0.3s ease;
-    width: 230px !important;
-    height: 230px !important;
+    width: 180px !important;
+    height: 180px !important;
 }
 
 .contacts {
@@ -357,12 +367,12 @@ body {
 
 .ant-menu-inline .ant-menu-submenu-title {
     padding-right: 30px;
-    padding-left: 11px !important;
 }
 
 .menuBtn {
     border-left: solid 1px #7086a0;
-    height: 67px;
+    height: 55px;
+    text-align: center;
 }
 
 .ant-layout-sider-collapsed .userName {
@@ -440,7 +450,8 @@ label {
     padding: 8px 12px;
 }
 
-.ant-menu-submenu-title .anticon {
+.ant-menu-submenu-title .anticon,
+.ant-menu-item .anticon {
     color: #288788;
     font-size: 15px;
 }

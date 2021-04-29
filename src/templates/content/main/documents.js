@@ -41,7 +41,7 @@ export default class Documents extends Component {
                                         <lord-icon
                                             style={bigDoc}
                                             trigger="hover"
-                                            src="./icons/78-document-PDF-outline-edited.json"
+                                            src="./icons/pdf.json"
                                         />
                                     </Tilt>
                                 </Col>
@@ -70,7 +70,7 @@ export default class Documents extends Component {
                                         <lord-icon
                                             style={bigDoc}
                                             trigger="hover"
-                                            src="./icons/80-document-DOC-outline-edited.json"
+                                            src="./icons/doc.json"
                                         />
                                     </Tilt>
                                 </Col>
@@ -108,7 +108,7 @@ export default class Documents extends Component {
                                         <lord-icon
                                             style={bigDoc}
                                             trigger="hover"
-                                            src="./icons/78-document-PDF-outline-edited.json"
+                                            src="./icons/pdf.json"
                                         />
                                     </Tilt>
                                 </Col>

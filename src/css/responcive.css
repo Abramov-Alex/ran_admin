@@ -23,6 +23,9 @@
     .divNameOne, .divNameTwo {
         font-size: 21px;
     }
+    .cabinetName {
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {

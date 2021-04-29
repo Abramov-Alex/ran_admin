@@ -3,6 +3,7 @@ import {Layer} from "react-parallax-scroll";
 import {Button, Col, Input, Row} from "antd";
 import Ran from "../../../img/ran.png";
 import Tilt from "react-parallax-tilt";
+import {Link} from "react-router-dom";
 
 export default class Login extends Component {
     render() {
@@ -57,14 +58,17 @@ export default class Login extends Component {
                                 scale={1.1}
                                 transitionSpeed={2500}
                             >
-                                <Button
-                                    className="btnLogin"
-                                    size="large"
-                                    ghost
-                                    block
-                                >
-                                    Войти
-                                </Button>
+                                <Link to="/admin">
+                                    <Button
+                                        type="button"
+                                        className="btnLogin"
+                                        size="large"
+                                        ghost
+                                        block
+                                    >
+                                        Войти
+                                    </Button>
+                                </Link>
                             </Tilt>
                         </Col>
                     </Row>

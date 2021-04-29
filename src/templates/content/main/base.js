@@ -4,7 +4,7 @@ import Statistics from "./statistics"
 import Documents from "./documents"
 import Contacts from "./contacts"
 
-export default class Main extends Component {
+export default class Base extends Component {
     render() {
         return(
             <>

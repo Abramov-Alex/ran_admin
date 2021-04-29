@@ -28,8 +28,9 @@ function Menu() {
     };
     const [isOpen, setOpen] = useState(false);
     const menuIcon = {
-        width: 55,
-        height: 55
+        width: 46,
+        height: 46,
+        marginTop: 5
     }
 
     return (
@@ -43,11 +44,11 @@ function Menu() {
                 }}
             >
                 <Row>
-                    <Col xs={3} sm={3} md={2} lg={2} xl={2} className="headerBurger">
+                    <Col xs={4} sm={3} md={3} lg={2} xl={2} className="headerBurger">
                         <Hamburger
                             rounded
                             color="white"
-                            size={60}
+                            size={40}
                             classNane="mainBurger"
                             toggled={isOpen}
                             toggle={setOpen}
@@ -60,7 +61,7 @@ function Menu() {
                             }}
                         />
                     </Col>
-                    <Col xs={0} sm={0} md={10} lg={12} xl={14}>
+                    <Col xs={0} sm={0} md={0} lg={6} xl={5}>
                         <p className="nameMain">
                             <span className="nameOne">ИС НМРиЭД</span>{" "}
                             <span className="nameTwo">РАН</span>
@@ -75,23 +76,28 @@ function Menu() {
                     {/*</Col>*/}
 
                     {/*-------For logged out users-------*/}
-                    <Col xs={21} sm={21} md={12} lg={10} xl={8} className="menuIcons">
-                        <Row>
-                            <Col span={4} offset={16} className="menuBtn">
-                                <lord-icon
-                                    style={menuIcon}
-                                    trigger="morph"
-                                    src="./icons/32-arrow-left-outline.json"
-                                />
-                            </Col>
-                            <Col span={4} className="menuBtn">
-                                <lord-icon
-                                    style={menuIcon}
-                                    trigger="hover"
-                                    src="./icons/313-two-avatar-icon-calm-outline.json"
-                                />
-                            </Col>
-                        </Row>
+                    <Col xs={14} sm={15} md={15} lg={12} xl={13}>
+                        <p className="cabinetName">
+                            Кабинет <span style={{fontWeight: 700}}>главного координатора</span>
+                        </p>
+                    </Col>
+                    <Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">
+                        <Link to="/">
+                            <lord-icon
+                                style={menuIcon}
+                                trigger="morph"
+                                src="./icons/arrow.json"
+                            />
+                        </Link>
+                    </Col>
+                    <Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">
+                        <Link to="/admin">
+                            <lord-icon
+                                style={menuIcon}
+                                trigger="hover"
+                                src="./icons/avatar.json"
+                            />
+                        </Link>
                     </Col>
                 </Row>
             </Header>
@@ -113,9 +119,17 @@ function Menu() {
                         <lord-icon
                             class="big"
                             trigger="hover"
-                            src="./icons/19-magnifier-zoom-search-outline-edited.json"
+                            src="./icons/home.json"
                         />
-                        <p className="underIcon">Поиск</p>
+                        <p className="underIcon">Главная</p>
+                    </Col>
+                    <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
+                        <lord-icon
+                            class="big"
+                            trigger="hover"
+                            src="./icons/cards.json"
+                        />
+                        <p className="underIcon">Объекты экспертизы</p>
                     </Col>
                     <Col
                         xs={12} sm={12} md={12} lg={6} xl={6}
@@ -125,27 +139,17 @@ function Menu() {
                         <lord-icon
                             class="big"
                             trigger="hover"
-                            src="./icons/152-bar-chart-arrow-growth-outline-edited.json"
+                            src="./icons/analytics.json"
                         />
                         <p className="underIcon">Аналитика</p>
                     </Col>
                     <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
-                        <Link to="/admin">
-                            <lord-icon
-                                class="big"
-                                trigger="hover"
-                                src="./icons/312-avatar-Icon-calm-search-outline-edited.json"
-                            />
-                            <p className="underIcon">Кабинет</p>
-                        </Link>
-                    </Col>
-                    <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
-                            trigger="hover"
-                            src="./icons/39-gear-settings-single-outline-edited.json"
+                            trigger="morph"
+                            src="./icons/registry.json"
                         />
-                        <p className="underIcon">Настройки</p>
+                        <p className="underIcon">Реестры</p>
                     </Col>
                 </Row>
                 <Row style={{minHeight: "40vh"}}>
@@ -153,33 +157,33 @@ function Menu() {
                         <lord-icon
                             class="big"
                             trigger="hover"
-                            src="./icons/60-documents-outline-edited.json"
+                            src="./icons/finance.json"
                         />
-                        <p className="underIcon">Формы</p>
+                        <p className="underIcon">Финансы</p>
                     </Col>
                     <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
                             trigger="hover"
-                            src="./icons/245-edit-document-outline-edited.json"
+                            src="./icons/competitions.json"
                         />
-                        <p className="underIcon">Редактирование</p>
+                        <p className="underIcon">Конкурсы</p>
                     </Col>
                     <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
                             trigger="hover"
-                            src="./icons/403-museum-authority-outline-edited.json"
+                            src="./icons/info.json"
                         />
-                        <p className="underIcon">Архив</p>
+                        <p className="underIcon">База знаний</p>
                     </Col>
                     <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
                             trigger="hover"
-                            src="./icons/113-atom-outline-edited.json"
+                            src="./icons/expert.json"
                         />
-                        <p className="underIcon">Наука</p>
+                        <p className="underIcon">Экспертные советы</p>
                     </Col>
                 </Row>
             </Drawer>
