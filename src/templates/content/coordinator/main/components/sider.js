@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {Layout, Menu, Affix} from "antd";
+import {Link} from "react-router-dom";
 import {NotificationOutlined, ProfileOutlined, ExclamationCircleOutlined, BarChartOutlined} from '@ant-design/icons';
 import 'moment/locale/ru';
 
@@ -31,14 +32,14 @@ export default class Admin extends Component {
                         defaultSelectedKeys={['1']}
                         style={{borderRight: 0, fontFamily: 'Nunito'}}
                     >
-                        <Menu.Item key="1" icon={<ExclamationCircleOutlined />}>События</Menu.Item>
-                        <Menu.Item key="2" icon={<BarChartOutlined />}>Инфопанели</Menu.Item>
-                        <Menu.Item key="3" icon={<NotificationOutlined />}>Новости</Menu.Item>
-                        <SubMenu key="4" icon={<ProfileOutlined />} title="Дополнительно">
-                            <Menu.Item key="5"> ... </Menu.Item>
-                            <Menu.Item key="6"> ... </Menu.Item>
-                            <Menu.Item key="7"> ... </Menu.Item>
-                        </SubMenu>
+                        <Menu.Item key="1" icon={<ExclamationCircleOutlined />}><Link to="/events">События</Link></Menu.Item>
+                        <Menu.Item key="2" icon={<BarChartOutlined />}><Link to="/dashboard">Инфопанели</Link></Menu.Item>
+                        <Menu.Item key="3" icon={<NotificationOutlined />}><Link to="/news">Новости</Link></Menu.Item>
+                        {/*<SubMenu key="4" icon={<ProfileOutlined />} title="Дополнительно">*/}
+                        {/*    <Menu.Item key="5"> ... </Menu.Item>*/}
+                        {/*    <Menu.Item key="6"> ... </Menu.Item>*/}
+                        {/*    <Menu.Item key="7"> ... </Menu.Item>*/}
+                        {/*</SubMenu>*/}
                     </Menu>
                 </Affix>
             </Sider>

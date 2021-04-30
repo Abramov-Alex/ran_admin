@@ -392,7 +392,7 @@ body {
     background: white;
     padding: 15px;
     margin-bottom: 20px;
-    min-height: 300px;
+    /*min-height: 300px;*/
     border: solid 1px #e6e6e6;
 }
 
@@ -453,5 +453,47 @@ label {
 .ant-menu-submenu-title .anticon,
 .ant-menu-item .anticon {
     color: #288788;
-    font-size: 15px;
+}
+
+.ant-menu-item a {
+    color: #4a617e;
+}
+
+.ant-menu-item-selected a,
+.ant-menu-item:hover a {
+    color: #288788;
+}
+
+.antd-pro-charts-timeline-chart-timelineChart canvas {
+    width: 99% !important;
+}
+
+.ant-alert-success,
+.ant-alert-warning,
+.ant-alert-info,
+.ant-alert-error,
+.ant-alert .blank {
+    border: 1px solid #f0f2f5;
+}
+
+.blank {
+    background: white;
+}
+
+.ant-alert-with-description .ant-alert-message {
+    color: #496788;
+    font-family: "Nunito", sans-serif;
+}
+
+.ant-alert,
+.ant-picker-calendar {
+    color: #444444;
+    font-family: "Nunito", sans-serif;
+}
+
+.pNews {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #444444;
+    font-family: "Nunito", sans-serif;
 }

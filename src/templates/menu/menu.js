@@ -82,7 +82,7 @@ function Menu() {
                         </p>
                     </Col>
                     <Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">
-                        <Link to="/">
+                        <Link to="/" onClick={onClose}>
                             <lord-icon
                                 style={menuIcon}
                                 trigger="morph"
@@ -91,7 +91,7 @@ function Menu() {
                         </Link>
                     </Col>
                     <Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">
-                        <Link to="/admin">
+                        <Link to="/events" onClick={onClose}>
                             <lord-icon
                                 style={menuIcon}
                                 trigger="hover"
@@ -116,20 +116,24 @@ function Menu() {
                 <br/>
                 <Row style={{minHeight: "40vh"}}>
                     <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
-                        <lord-icon
-                            class="big"
-                            trigger="hover"
-                            src="./icons/home.json"
-                        />
-                        <p className="underIcon">Главная</p>
+                        <Link to="/events">
+                            <lord-icon
+                                class="big"
+                                trigger="hover"
+                                src="./icons/home.json"
+                            />
+                            <p className="underIcon">Главная</p>
+                        </Link>
                     </Col>
                     <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
-                        <lord-icon
-                            class="big"
-                            trigger="hover"
-                            src="./icons/cards.json"
-                        />
-                        <p className="underIcon">Объекты экспертизы</p>
+                        <Link to="/admin">
+                            <lord-icon
+                                class="big"
+                                trigger="hover"
+                                src="./icons/cards.json"
+                            />
+                            <p className="underIcon">Объекты экспертизы</p>
+                        </Link>
                     </Col>
                     <Col
                         xs={12} sm={12} md={12} lg={6} xl={6}

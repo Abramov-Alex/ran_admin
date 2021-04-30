@@ -9,8 +9,11 @@ import {
 import {VerticalAlignTopOutlined} from "@ant-design/icons";
 import "ant-design-pro/dist/ant-design-pro.css";
 import Menu from './menu/menu'
-import Main from "./content/main/base";
-import Admin from "./content/cabinet/admin";
+import Main from "./content/index";
+import Admin from "./content/coordinator/expertise/admin";
+import Events from "./content/coordinator/main/events";
+import Dashboard from "./content/coordinator/main/dashboard";
+import News from "./content/coordinator/main/news";
 
 const {Content} = Layout;
 
@@ -31,6 +34,15 @@ export default class Index extends Component {
                         <Switch>
                             <Route path="/" exact>
                                 <Main />
+                            </Route>
+                            <Route path="/events" exact>
+                                <Events />
+                            </Route>
+                            <Route path="/dashboard" exact>
+                                <Dashboard />
+                            </Route>
+                            <Route path="/news" exact>
+                                <News />
                             </Route>
                             <Route path="/admin" exact>
                                 <Admin />
