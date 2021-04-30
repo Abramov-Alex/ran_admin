@@ -49,27 +49,28 @@ export default class Login extends Component {
                     <Row justify="center">
                         <Col xs={22} sm={22} md={12} lg={12} xl={8} style={{textAlign: "center"}}>
                             <br/><br/><br/>
-                            <Tilt
-                                glareEnable={true}
-                                glareMaxOpacity={0.15}
-                                glareColor="#ffffff"
-                                glarePosition="bottom"
-                                tiltAxis='y'
-                                scale={1.1}
-                                transitionSpeed={2500}
-                            >
-                                <Link to="/admin">
-                                    <Button
-                                        type="button"
-                                        className="btnLogin"
-                                        size="large"
-                                        ghost
-                                        block
-                                    >
-                                        Войти
-                                    </Button>
-                                </Link>
-                            </Tilt>
+                            <Link to="/events">
+                                <Tilt
+                                    glareEnable={true}
+                                    glareMaxOpacity={0.15}
+                                    glareColor="#ffffff"
+                                    glarePosition="bottom"
+                                    tiltAxis='y'
+                                    scale={1.1}
+                                    transitionSpeed={2500}
+                                >
+
+                                        <Button
+                                            type="button"
+                                            className="btnLogin"
+                                            size="large"
+                                            ghost
+                                            block
+                                        >
+                                            Войти
+                                        </Button>
+                                </Tilt>
+                            </Link>
                         </Col>
                     </Row>
                     <Row justify="center">

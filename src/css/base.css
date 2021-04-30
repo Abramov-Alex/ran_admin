@@ -193,7 +193,8 @@ body {
 }
 
 .menuAnchor a {
-    height: 68px;
+    margin-top: 6px;
+    height: 55px;
     text-align: center;
     flex: 1;
     color: white;

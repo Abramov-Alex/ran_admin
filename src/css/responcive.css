@@ -1,6 +1,7 @@
 @media (max-width: 576px) {
     .menuAnchor a{
         font-size: 12.5px;
+        margin-top: 12px;
     }
     .name {
         font-size: 21px;

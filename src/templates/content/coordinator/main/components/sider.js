@@ -32,9 +32,24 @@ export default class Admin extends Component {
                         defaultSelectedKeys={['1']}
                         style={{borderRight: 0, fontFamily: 'Nunito'}}
                     >
-                        <Menu.Item key="1" icon={<ExclamationCircleOutlined />}><Link to="/events">События</Link></Menu.Item>
-                        <Menu.Item key="2" icon={<BarChartOutlined />}><Link to="/dashboard">Инфопанели</Link></Menu.Item>
-                        <Menu.Item key="3" icon={<NotificationOutlined />}><Link to="/news">Новости</Link></Menu.Item>
+                        <Menu.Item
+                            key="1"
+                            icon={<ExclamationCircleOutlined />}
+                        >
+                            <Link to="/events">События</Link>
+                        </Menu.Item>
+                        <Menu.Item
+                            key="2"
+                            icon={<BarChartOutlined />}
+                        >
+                            <Link to="/dashboard">Инфопанели</Link>
+                        </Menu.Item>
+                        <Menu.Item
+                            key="3"
+                            icon={<NotificationOutlined />}
+                        >
+                            <Link to="/news">Новости</Link>
+                        </Menu.Item>
                         {/*<SubMenu key="4" icon={<ProfileOutlined />} title="Дополнительно">*/}
                         {/*    <Menu.Item key="5"> ... </Menu.Item>*/}
                         {/*    <Menu.Item key="6"> ... </Menu.Item>*/}

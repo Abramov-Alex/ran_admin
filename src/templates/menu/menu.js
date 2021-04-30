@@ -10,6 +10,7 @@ defineLordIconElement(loadAnimation);
 
 function Menu() {
 
+    const {Header} = Layout;
     const scrollWithOffset = (el, offset) => {
         const elementPosition = el.offsetTop - offset;
         window.scroll({
@@ -19,10 +20,16 @@ function Menu() {
         });
     };
     const [visible, setVisible] = useState(false);
+    const onToggle = (toggled) => {
+        if (toggled) {
+            showDrawer();
+        } else {
+            onClose();
+        }
+    }
     const onClose = () => {
         setVisible(false);
     };
-    const {Header} = Layout;
     const showDrawer = () => {
         setVisible(true);
     };
@@ -52,13 +59,7 @@ function Menu() {
                             classNane="mainBurger"
                             toggled={isOpen}
                             toggle={setOpen}
-                            onToggle={(toggled) => {
-                                if (toggled) {
-                                    showDrawer();
-                                } else {
-                                    onClose();
-                                }
-                            }}
+                            onToggle={onToggle}
                         />
                     </Col>
                     <Col xs={0} sm={0} md={0} lg={6} xl={5}>
@@ -67,38 +68,67 @@ function Menu() {
                             <span className="nameTwo">РАН</span>
                         </p>
                     </Col>
-                    {/*-------For logged in users-------*/}
-                    {/*<Col xs={21} sm={21} md={12} lg={10} xl={8} className="menuAnchor">*/}
-                    {/*    <NavHashLink activeClassName="selected" smooth to="/#login">Главная</NavHashLink>*/}
-                    {/*    <NavHashLink scroll={el => scrollWithOffset(el, 68)} activeClassName="selected" smooth to="/#statistics">Статистика</NavHashLink>*/}
-                    {/*    <NavHashLink scroll={el => scrollWithOffset(el, 68)} activeClassName="selected" smooth to="/#documents">Документы</NavHashLink>*/}
-                    {/*    <NavHashLink scroll={el => scrollWithOffset(el, 68)} activeClassName="selected" smooth to="/#contacts">Контакты</NavHashLink>*/}
-                    {/*</Col>*/}
 
-                    {/*-------For logged out users-------*/}
-                    <Col xs={14} sm={15} md={15} lg={12} xl={13}>
-                        <p className="cabinetName">
-                            Кабинет <span style={{fontWeight: 700}}>главного координатора</span>
-                        </p>
+                    {/*Logout*/}
+
+                    <Col xs={20} sm={20} md={18} lg={{span: 9, offset: 7}} xl={{span: 8, offset: 9}} className="menuAnchor">
+                        <NavHashLink
+                            activeClassName="selected"
+                            smooth to="/#login"
+                        >
+                            Главная
+                        </NavHashLink>
+                        <NavHashLink
+                            scroll={el => scrollWithOffset(el, 55)}
+                            activeClassName="selected"
+                            smooth
+                            to="/#statistics"
+                        >
+                            Статистика
+                        </NavHashLink>
+                        <NavHashLink
+                            scroll={el => scrollWithOffset(el, 55)}
+                            activeClassName="selected"
+                            smooth
+                            to="/#documents"
+                        >
+                            Документы
+                        </NavHashLink>
+                        <NavHashLink
+                            scroll={el => scrollWithOffset(el, 55)}
+                            activeClassName="selected"
+                            smooth
+                            to="/#contacts"
+                        >
+                            Контакты
+                        </NavHashLink>
                     </Col>
-                    <Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">
-                        <Link to="/" onClick={onClose}>
-                            <lord-icon
-                                style={menuIcon}
-                                trigger="morph"
-                                src="./icons/arrow.json"
-                            />
-                        </Link>
-                    </Col>
-                    <Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">
-                        <Link to="/events" onClick={onClose}>
-                            <lord-icon
-                                style={menuIcon}
-                                trigger="hover"
-                                src="./icons/avatar.json"
-                            />
-                        </Link>
-                    </Col>
+
+                    {/*Login*/}
+
+                    {/*<Col xs={14} sm={15} md={15} lg={12} xl={13}>*/}
+                    {/*    <p className="cabinetName">*/}
+                    {/*        Кабинет <span style={{fontWeight: 700}}>главного координатора</span>*/}
+                    {/*    </p>*/}
+                    {/*</Col>*/}
+                    {/*<Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">*/}
+                    {/*    <Link to="/">*/}
+                    {/*        <lord-icon*/}
+                    {/*            style={menuIcon}*/}
+                    {/*            trigger="morph"*/}
+                    {/*            src="./icons/arrow.json"*/}
+                    {/*        />*/}
+                    {/*    </Link>*/}
+                    {/*</Col>*/}
+                    {/*<Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">*/}
+                    {/*    <Link to="/events">*/}
+                    {/*        <lord-icon*/}
+                    {/*            style={menuIcon}*/}
+                    {/*            trigger="hover"*/}
+                    {/*            src="./icons/avatar.json"*/}
+                    {/*        />*/}
+                    {/*    </Link>*/}
+                    {/*</Col>*/}
                 </Row>
             </Header>
             <Drawer
@@ -116,7 +146,10 @@ function Menu() {
                 <br/>
                 <Row style={{minHeight: "40vh"}}>
                     <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
-                        <Link to="/events">
+                        <Link to="/events" onClick={() => {
+                            onClose();
+                            setOpen();
+                        }}>
                             <lord-icon
                                 class="big"
                                 trigger="hover"
@@ -126,7 +159,10 @@ function Menu() {
                         </Link>
                     </Col>
                     <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
-                        <Link to="/admin">
+                        <Link to="/admin" onClick={() => {
+                            onClose();
+                            setOpen();
+                        }}>
                             <lord-icon
                                 class="big"
                                 trigger="hover"

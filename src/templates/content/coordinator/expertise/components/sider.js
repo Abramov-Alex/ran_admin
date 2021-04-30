@@ -32,11 +32,36 @@ export default class Admin extends Component {
                         defaultSelectedKeys={['1']}
                         style={{borderRight: 0, fontFamily: 'Nunito'}}
                     >
-                        <Menu.Item key="1" icon={<ProfileOutlined />}><Link to="/admin">Проекты тематик</Link></Menu.Item>
-                        <Menu.Item key="2" icon={<OneToOneOutlined />}><Link to="/admin">Планы тематик</Link></Menu.Item>
-                        <Menu.Item key="3" icon={<FileTextOutlined />}><Link to="/admin">Отчеты НИР</Link></Menu.Item>
-                        <Menu.Item key="4" icon={<AppstoreOutlined />}><Link to="/admin">Иные карты</Link></Menu.Item>
-                        <Menu.Item key="5" icon={<SettingOutlined />}><Link to="/admin">Конструктор карт</Link></Menu.Item>
+                        <Menu.Item
+                            key="1"
+                            icon={<ProfileOutlined />}
+                        >
+                            <Link to="/admin">Проекты тематик</Link>
+                        </Menu.Item>
+                        <Menu.Item
+                            key="2"
+                            icon={<OneToOneOutlined />}
+                        >
+                            <Link to="/admin">Планы тематик</Link>
+                        </Menu.Item>
+                        <Menu.Item
+                            key="3"
+                            icon={<FileTextOutlined />}
+                        >
+                            <Link to="/admin">Отчеты НИР</Link>
+                        </Menu.Item>
+                        <Menu.Item
+                            key="4"
+                            icon={<AppstoreOutlined />}
+                        >
+                            <Link to="/admin">Иные карты</Link>
+                        </Menu.Item>
+                        <Menu.Item
+                            key="5"
+                            icon={<SettingOutlined />}
+                        >
+                            <Link to="/admin">Конструктор карт</Link>
+                        </Menu.Item>
                         {/*<SubMenu key="4" icon={<ProfileOutlined />} title="Дополнительно">*/}
                         {/*    <Menu.Item key="5"> ... </Menu.Item>*/}
                         {/*    <Menu.Item key="6"> ... </Menu.Item>*/}
