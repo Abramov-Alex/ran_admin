@@ -1,7 +1,5 @@
 import React, {Component} from "react";
-import {Row, Col, Layout, Timeline, Alert, Calendar, ConfigProvider} from "antd";
-import 'moment/locale/ru';
-import ruRU from 'antd/lib/locale/ru_RU';
+import {Alert, Calendar, Col, ConfigProvider, Layout, Row, Timeline} from "antd";
 import SiderMenu from './components/sider'
 
 const { Content } = Layout;
@@ -35,7 +33,7 @@ export default class Events extends Component {
                                             </Col>
                                         </Row>
                                     </div>
-                                    <div className="whiteDiv" style={{minHeight: '84vh'}}>
+                                    <div className="whiteDiv" style={{minHeight: '85vh'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p/>
@@ -102,10 +100,8 @@ export default class Events extends Component {
                                             </Col>
                                         </Row>
                                     </div>
-                                    <div className="whiteDiv" style={{minHeight: '86.4vh'}}>
-                                        <ConfigProvider locale={ruRU}>
-                                            <Calendar onPanelChange={onPanelChange} />
-                                        </ConfigProvider>
+                                    <div className="whiteDiv" style={{minHeight: '85vh'}}>
+                                        <Calendar onPanelChange={onPanelChange} />
                                     </div>
                                 </Col>
                             </Row>

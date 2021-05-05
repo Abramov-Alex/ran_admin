@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import {Row, Col, Layout, Timeline, Alert, Image} from "antd";
-import { ClockCircleOutlined } from '@ant-design/icons';
+import {Alert, Col, Image, Layout, Row, Timeline} from "antd";
+import {ClockCircleOutlined} from '@ant-design/icons';
 import SiderMenu from './components/sider'
 import news from '../../../../img/news.jpg'
 

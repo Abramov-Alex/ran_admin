@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Row, Col, Layout} from "antd";
+import {Col, Layout, Row} from "antd";
 import 'moment/locale/ru';
 import SiderMenu from './components/sider'
 import {Bar, Pie, TimelineChart} from "ant-design-pro/lib/Charts";

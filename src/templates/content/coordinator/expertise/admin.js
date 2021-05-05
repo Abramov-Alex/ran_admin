@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Row, Col, Layout, Input, Select, DatePicker, Button, ConfigProvider} from "antd";
+import {Button, Col, ConfigProvider, DatePicker, Input, Layout, Row, Select} from "antd";
 import 'moment/locale/ru';
 import ruRU from 'antd/lib/locale/ru_RU';
 import SiderMenu from '../expertise/components/sider'
@@ -80,15 +80,11 @@ export default class Admin extends Component {
                                         <Row gutter={10}>
                                             <Col xs={24} sm={24} md={6} lg={6} xl={6}>
                                                 <label>Дата начала</label>
-                                                <ConfigProvider locale={ruRU}>
-                                                    <DatePicker placeholder="..." style={{width: '100%'}} allowClear/>
-                                                </ConfigProvider>
+                                                <DatePicker placeholder="..." style={{width: '100%'}} allowClear/>
                                             </Col>
                                             <Col xs={24} sm={24} md={6} lg={6} xl={6}>
                                                 <label>Дата окончания</label>
-                                                <ConfigProvider locale={ruRU}>
-                                                    <DatePicker placeholder="..." style={{width: '100%'}} allowClear/>
-                                                </ConfigProvider>
+                                                <DatePicker placeholder="..." style={{width: '100%'}} allowClear/>
                                             </Col>
                                             <Col xs={24} sm={12} md={6} lg={6} xl={6}>
                                                 <Button style={{width: '100%', marginTop: '22px'}} type="primary" danger>Очистить</Button>

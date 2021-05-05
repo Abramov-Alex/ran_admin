@@ -1,10 +1,9 @@
 import React, {Component} from "react";
-import {Layout, Menu, Affix} from "antd";
+import {Affix, Layout, Menu} from "antd";
 import {Link} from "react-router-dom";
-import {NotificationOutlined, ProfileOutlined, ExclamationCircleOutlined, BarChartOutlined} from '@ant-design/icons';
+import {BarChartOutlined, ExclamationCircleOutlined, NotificationOutlined} from '@ant-design/icons';
 import 'moment/locale/ru';
 
-const { SubMenu } = Menu;
 const { Sider } = Layout;
 
 export default class Admin extends Component {
@@ -50,11 +49,6 @@ export default class Admin extends Component {
                         >
                             <Link to="/news">Новости</Link>
                         </Menu.Item>
-                        {/*<SubMenu key="4" icon={<ProfileOutlined />} title="Дополнительно">*/}
-                        {/*    <Menu.Item key="5"> ... </Menu.Item>*/}
-                        {/*    <Menu.Item key="6"> ... </Menu.Item>*/}
-                        {/*    <Menu.Item key="7"> ... </Menu.Item>*/}
-                        {/*</SubMenu>*/}
                     </Menu>
                 </Affix>
             </Sider>

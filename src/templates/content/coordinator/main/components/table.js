@@ -1,5 +1,5 @@
 import React from "react";
-import {Table, Tag, Dropdown, Menu} from "antd";
+import {Dropdown, Menu, Table, Tag} from "antd";
 
 const menuIcon = {
     width: 47,

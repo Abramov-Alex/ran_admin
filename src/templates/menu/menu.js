@@ -1,16 +1,18 @@
 import React, {useState} from "react";
-import {Layout, Row, Col, Drawer, Button} from "antd";
+import {Col, Drawer, Layout, Row} from "antd";
 import {Squash as Hamburger} from "hamburger-react";
 import {Link} from "react-router-dom";
 import {NavHashLink} from 'react-router-hash-link';
 import {defineLordIconElement} from "lord-icon-element";
 import {loadAnimation} from "lottie-web";
+import {useSelector} from "react-redux";
+import {menuLogin} from "./menuSlice";
 
 defineLordIconElement(loadAnimation);
 
 function Menu() {
-
     const {Header} = Layout;
+    const login = useSelector(menuLogin);
     const scrollWithOffset = (el, offset) => {
         const elementPosition = el.offsetTop - offset;
         window.scroll({
@@ -68,67 +70,67 @@ function Menu() {
                             <span className="nameTwo">РАН</span>
                         </p>
                     </Col>
-
-                    {/*Logout*/}
-
-                    <Col xs={20} sm={20} md={18} lg={{span: 9, offset: 7}} xl={{span: 8, offset: 9}} className="menuAnchor">
-                        <NavHashLink
-                            activeClassName="selected"
-                            smooth to="/#login"
-                        >
-                            Главная
-                        </NavHashLink>
-                        <NavHashLink
-                            scroll={el => scrollWithOffset(el, 55)}
-                            activeClassName="selected"
-                            smooth
-                            to="/#statistics"
-                        >
-                            Статистика
-                        </NavHashLink>
-                        <NavHashLink
-                            scroll={el => scrollWithOffset(el, 55)}
-                            activeClassName="selected"
-                            smooth
-                            to="/#documents"
-                        >
-                            Документы
-                        </NavHashLink>
-                        <NavHashLink
-                            scroll={el => scrollWithOffset(el, 55)}
-                            activeClassName="selected"
-                            smooth
-                            to="/#contacts"
-                        >
-                            Контакты
-                        </NavHashLink>
-                    </Col>
-
-                    {/*Login*/}
-
-                    {/*<Col xs={14} sm={15} md={15} lg={12} xl={13}>*/}
-                    {/*    <p className="cabinetName">*/}
-                    {/*        Кабинет <span style={{fontWeight: 700}}>главного координатора</span>*/}
-                    {/*    </p>*/}
-                    {/*</Col>*/}
-                    {/*<Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">*/}
-                    {/*    <Link to="/">*/}
-                    {/*        <lord-icon*/}
-                    {/*            style={menuIcon}*/}
-                    {/*            trigger="morph"*/}
-                    {/*            src="./icons/arrow.json"*/}
-                    {/*        />*/}
-                    {/*    </Link>*/}
-                    {/*</Col>*/}
-                    {/*<Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">*/}
-                    {/*    <Link to="/events">*/}
-                    {/*        <lord-icon*/}
-                    {/*            style={menuIcon}*/}
-                    {/*            trigger="hover"*/}
-                    {/*            src="./icons/avatar.json"*/}
-                    {/*        />*/}
-                    {/*    </Link>*/}
-                    {/*</Col>*/}
+                    {login ?
+                        <>
+                            <Col xs={14} sm={15} md={15} lg={12} xl={13}>
+                                <p className="cabinetName">
+                                    Кабинет <span style={{fontWeight: 700}}>главного координатора</span>
+                                </p>
+                            </Col>
+                            <Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">
+                                <Link to="/">
+                                    <lord-icon
+                                        style={menuIcon}
+                                        trigger="morph"
+                                        src="./icons/arrow.json"
+                                    />
+                                </Link>
+                            </Col>
+                            <Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">
+                                <Link to="/events">
+                                    <lord-icon
+                                        style={menuIcon}
+                                        trigger="hover"
+                                        src="./icons/avatar.json"
+                                    />
+                                </Link>
+                            </Col>
+                        </>
+                        :
+                        <Col xs={20} sm={20} md={18} lg={{span: 9, offset: 7}} xl={{span: 8, offset: 9}}
+                             className="menuAnchor">
+                            <NavHashLink
+                                activeClassName="selected"
+                                smooth to="/#login"
+                            >
+                                Главная
+                            </NavHashLink>
+                            <NavHashLink
+                                scroll={el => scrollWithOffset(el, 55)}
+                                activeClassName="selected"
+                                smooth
+                                to="/#statistics"
+                            >
+                                Статистика
+                            </NavHashLink>
+                            <NavHashLink
+                                scroll={el => scrollWithOffset(el, 55)}
+                                activeClassName="selected"
+                                smooth
+                                to="/#documents"
+                            >
+                                Документы
+                            </NavHashLink>
+                            <NavHashLink
+                                scroll={el => scrollWithOffset(el, 55)}
+                                activeClassName="selected"
+                                smooth
+                                to="/#contacts"
+                            >
+                                Контакты
+                            </NavHashLink>
+                        </Col>
+                    }
                 </Row>
             </Header>
             <Drawer

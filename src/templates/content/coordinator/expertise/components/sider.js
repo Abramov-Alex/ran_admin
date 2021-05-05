@@ -1,7 +1,13 @@
 import React, {Component} from "react";
-import {Layout, Menu, Affix} from "antd";
+import {Affix, Layout, Menu} from "antd";
 import {Link} from "react-router-dom";
-import {FileTextOutlined, ProfileOutlined, OneToOneOutlined, AppstoreOutlined, SettingOutlined} from '@ant-design/icons';
+import {
+    AppstoreOutlined,
+    FileTextOutlined,
+    OneToOneOutlined,
+    ProfileOutlined,
+    SettingOutlined
+} from '@ant-design/icons';
 import 'moment/locale/ru';
 
 const { SubMenu } = Menu;
