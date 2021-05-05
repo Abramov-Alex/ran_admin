@@ -25,7 +25,7 @@ export default class Events extends Component {
                             }}
                         >
                             <Row gutter={20}>
-                                <Col span={12}>
+                                <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                                     <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '10px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
@@ -41,49 +41,49 @@ export default class Events extends Component {
                                                     <Timeline.Item color="green">
                                                         <Alert
                                                             message="28.04.2021"
-                                                            description="Detailed description and advice about successful copywriting."
+                                                            description="Оповещение о важном событии для кабинета главного координатора РАН ..."
                                                             type="success"
                                                         />
                                                     </Timeline.Item>
                                                     <Timeline.Item color="green">
                                                         <Alert
                                                             message="28.04.2021"
-                                                            description="Detailed description and advice about successful copywriting."
+                                                            description="Оповещение о важном событии для кабинета главного координатора РАН ..."
                                                             type="success"
                                                         />
                                                     </Timeline.Item>
                                                     <Timeline.Item color="red">
                                                         <Alert
                                                             message="29.04.2021"
-                                                            description="This is an error message about copywriting."
+                                                            description="Оповещение о важном событии для кабинета главного координатора РАН ..."
                                                             type="error"
                                                         />
                                                     </Timeline.Item>
                                                     <Timeline.Item>
                                                         <Alert
                                                             message="30.04.2021"
-                                                            description="Additional description and information about copywriting."
+                                                            description="Оповещение о важном событии для кабинета главного координатора РАН ..."
                                                             type="info"
                                                         />
                                                     </Timeline.Item>
                                                     <Timeline.Item color="gray">
                                                         <Alert
                                                             message="01.05.2021"
-                                                            description="This is a warning notice about copywriting."
+                                                            description="Оповещение о важном событии для кабинета главного координатора РАН ..."
                                                             type="warning"
                                                         />
                                                     </Timeline.Item>
                                                     <Timeline.Item color="gray">
                                                         <Alert
                                                             message="01.05.2021"
-                                                            description="This is a warning notice about copywriting."
+                                                            description="Оповещение о важном событии для кабинета главного координатора РАН ..."
                                                             type="warning"
                                                         />
                                                     </Timeline.Item>
                                                     <Timeline.Item>
                                                         <Alert
                                                             message="01.05.2021"
-                                                            description="Additional description and information about copywriting."
+                                                            description="Оповещение о важном событии для кабинета главного координатора РАН ..."
                                                             type="info"
                                                         />
                                                     </Timeline.Item>
@@ -92,7 +92,7 @@ export default class Events extends Component {
                                         </Row>
                                     </div>
                                 </Col>
-                                <Col span={12}>
+                                <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                                     <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '10px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>

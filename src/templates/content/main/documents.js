@@ -6,7 +6,9 @@ import Tilt from "react-parallax-tilt";
 const bigDoc = {
     width: 170,
     height: 170,
-    background: "#d0dce8"
+    background: "#d0dce8",
+    clipPath: `polygon(20% 0%,80% 0%,100% 20%,100% 100%,80% 100%,20% 100%,0% 100%,0% 0%)`,
+    borderBottom: `solid 5px rgb(9 168 138)`
 }
 
 export default class Documents extends Component {

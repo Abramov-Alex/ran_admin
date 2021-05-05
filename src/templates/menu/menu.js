@@ -161,7 +161,7 @@ function Menu() {
                         </Link>
                     </Col>
                     <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
-                        <Link to="/admin" onClick={() => {
+                        <Link to="/ptni" onClick={() => {
                             onClose();
                             setOpen();
                         }}>

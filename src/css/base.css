@@ -62,7 +62,7 @@ body {
 }
 
 .logo {
-    height: 155px;
+    height: 151px;
     opacity: 0.8;
 }
 
@@ -481,7 +481,8 @@ label {
     transition: all 0.3s ease;
 }
 
-.blank:hover {
+.blank:hover,
+.activeAlert {
     background: whitesmoke;
     transition: all 0.3s ease;
 }
@@ -498,6 +499,8 @@ label {
 }
 
 .pNews {
+    text-indent: 1.5em;
+    text-align: justify;
     margin-top: 20px;
     font-size: 16px;
     color: #444444;

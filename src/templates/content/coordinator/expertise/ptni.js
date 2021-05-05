@@ -1,14 +1,13 @@
 import React, {Component} from "react";
-import {Button, Col, ConfigProvider, DatePicker, Input, Layout, Row, Select} from "antd";
+import {Button, Col, DatePicker, Input, Layout, Row, Select} from "antd";
 import 'moment/locale/ru';
-import ruRU from 'antd/lib/locale/ru_RU';
 import SiderMenu from '../expertise/components/sider'
 import TableExample from '../expertise/components/table'
 
 const { Content } = Layout;
 const { Option } = Select;
 
-export default class Admin extends Component {
+export default class Ptni extends Component {
 
     state = {
         collapsed: false,
@@ -42,7 +41,7 @@ export default class Admin extends Component {
                                             </Col>
                                         </Row>
                                         <Row gutter={10}>
-                                            <Col xs={24} sm={24} md={6} lg={6} xl={6}>
+                                            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
                                                 <label>Статус</label>
                                                 <Select style={{ width: '100%' }} placeholder="..." allowClear>
                                                     <Option value="1">Сохранено</Option>
@@ -50,7 +49,7 @@ export default class Admin extends Component {
                                                     <Option value="3">Черновик</Option>
                                                 </Select>
                                             </Col>
-                                            <Col xs={24} sm={24} md={6} lg={6} xl={6}>
+                                            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
                                                 <label>Организация</label>
                                                 <Select style={{ width: '100%' }} placeholder="..." allowClear>
                                                     <Option value="1">1 ...</Option>
@@ -58,11 +57,11 @@ export default class Admin extends Component {
                                                     <Option value="3">3 ...</Option>
                                                 </Select>
                                             </Col>
-                                            <Col xs={24} sm={24} md={6} lg={6} xl={6}>
+                                            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
                                                 <label>Ключевые слова</label>
                                                 <Input placeholder="..." allowClear/>
                                             </Col>
-                                            <Col xs={24} sm={24} md={6} lg={6} xl={6}>
+                                            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
                                                 <label>ИНН</label>
                                                 <Input placeholder="..." allowClear/>
                                             </Col>
@@ -78,18 +77,18 @@ export default class Admin extends Component {
                                             </Col>
                                         </Row>
                                         <Row gutter={10}>
-                                            <Col xs={24} sm={24} md={6} lg={6} xl={6}>
+                                            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
                                                 <label>Дата начала</label>
                                                 <DatePicker placeholder="..." style={{width: '100%'}} allowClear/>
                                             </Col>
-                                            <Col xs={24} sm={24} md={6} lg={6} xl={6}>
+                                            <Col xs={24} sm={24} md={12} lg={6} xl={6}>
                                                 <label>Дата окончания</label>
                                                 <DatePicker placeholder="..." style={{width: '100%'}} allowClear/>
                                             </Col>
-                                            <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+                                            <Col xs={24} sm={12} md={12} lg={6} xl={6}>
                                                 <Button style={{width: '100%', marginTop: '22px'}} type="primary" danger>Очистить</Button>
                                             </Col>
-                                            <Col xs={24} sm={12} md={6} lg={6} xl={6}>
+                                            <Col xs={24} sm={12} md={12} lg={6} xl={6}>
                                                 <Button style={{width: '100%', marginTop: '22px'}} type="primary">
                                                     Сформировать
                                                 </Button>

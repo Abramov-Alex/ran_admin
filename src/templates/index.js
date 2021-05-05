@@ -6,7 +6,7 @@ import {VerticalAlignTopOutlined} from "@ant-design/icons";
 import "ant-design-pro/dist/ant-design-pro.css";
 import Menu from './menu/menu'
 import Main from "./content/main";
-import Admin from "./content/coordinator/expertise/admin";
+import Ptni from "./content/coordinator/expertise/ptni";
 import Events from "./content/coordinator/main/events";
 import Dashboard from "./content/coordinator/main/dashboard";
 import News from "./content/coordinator/main/news";
@@ -29,7 +29,7 @@ export default class Index extends Component {
                         <Menu/>
                         <Content className="site-layout">
                             <div className="bgheader"/>
-                            {/*<Admin />*/}
+                            {/*<Ptni />*/}
                             <Switch>
                                 <Route path="/" exact component={Main}/>
                                 <Route path="/events" exact>
@@ -41,8 +41,8 @@ export default class Index extends Component {
                                 <Route path="/news" exact>
                                     <News/>
                                 </Route>
-                                <Route path="/admin" exact>
-                                    <Admin/>
+                                <Route path="/ptni" exact>
+                                    <Ptni/>
                                 </Route>
                             </Switch>
                         </Content>

@@ -10,10 +10,9 @@ import {
 } from '@ant-design/icons';
 import 'moment/locale/ru';
 
-const { SubMenu } = Menu;
 const { Sider } = Layout;
 
-export default class Admin extends Component {
+export default class Ptni extends Component {
 
     state = {
         collapsed: false,
@@ -42,37 +41,36 @@ export default class Admin extends Component {
                             key="1"
                             icon={<ProfileOutlined />}
                         >
-                            <Link to="/admin">Проекты тематик</Link>
+                            <Link to="/ptni">Проекты тематик</Link>
                         </Menu.Item>
                         <Menu.Item
+                            disabled
                             key="2"
                             icon={<OneToOneOutlined />}
                         >
-                            <Link to="/admin">Планы тематик</Link>
+                            <Link to="/ptni">Планы тематик</Link>
                         </Menu.Item>
                         <Menu.Item
+                            disabled
                             key="3"
                             icon={<FileTextOutlined />}
                         >
-                            <Link to="/admin">Отчеты НИР</Link>
+                            <Link to="/ptni">Отчеты НИР</Link>
                         </Menu.Item>
                         <Menu.Item
+                            disabled
                             key="4"
                             icon={<AppstoreOutlined />}
                         >
-                            <Link to="/admin">Иные карты</Link>
+                            <Link to="/ptni">Иные карты</Link>
                         </Menu.Item>
                         <Menu.Item
+                            disabled
                             key="5"
                             icon={<SettingOutlined />}
                         >
-                            <Link to="/admin">Конструктор карт</Link>
+                            <Link to="/ptni">Конструктор карт</Link>
                         </Menu.Item>
-                        {/*<SubMenu key="4" icon={<ProfileOutlined />} title="Дополнительно">*/}
-                        {/*    <Menu.Item key="5"> ... </Menu.Item>*/}
-                        {/*    <Menu.Item key="6"> ... </Menu.Item>*/}
-                        {/*    <Menu.Item key="7"> ... </Menu.Item>*/}
-                        {/*</SubMenu>*/}
                     </Menu>
                 </Affix>
             </Sider>
