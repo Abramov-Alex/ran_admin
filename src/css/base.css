@@ -393,7 +393,6 @@ body {
     background: white;
     padding: 15px;
     margin-bottom: 20px;
-    /*min-height: 300px;*/
     border: solid 1px #e6e6e6;
 }
 
@@ -479,6 +478,12 @@ label {
 
 .blank {
     background: white;
+    transition: all 0.3s ease;
+}
+
+.blank:hover {
+    background: whitesmoke;
+    transition: all 0.3s ease;
 }
 
 .ant-alert-with-description .ant-alert-message {
