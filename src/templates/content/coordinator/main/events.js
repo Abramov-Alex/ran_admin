@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Alert, Calendar, Col, ConfigProvider, Layout, Row, Timeline} from "antd";
+import {Alert, Calendar, Col, Layout, Row, Timeline} from "antd";
 import SiderMenu from './components/sider'
 
 const { Content } = Layout;
