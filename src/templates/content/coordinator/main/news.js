@@ -38,7 +38,8 @@ export default class News extends Component {
                                                 <p/>
                                                 <Timeline>
                                                     <Timeline.Item
-                                                        dot={<ClockCircleOutlined className="timeline-clock-icon"/>} color="red">
+                                                        dot={<ClockCircleOutlined className="timeline-clock-icon"/>}
+                                                        color="red">
                                                         <Alert
                                                             className="blank activeAlert"
                                                             message="27.04.2021"
@@ -96,7 +97,7 @@ export default class News extends Component {
                                                 </Timeline>
                                             </Col>
                                             <Col span={24} style={{textAlign: 'center'}}>
-                                                <Pagination responsive={true} total={500} />
+                                                <Pagination responsive={true} total={500}/>
                                             </Col>
                                         </Row>
                                     </div>

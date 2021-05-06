@@ -215,17 +215,17 @@ function Menu() {
                         <lord-icon
                             class="big"
                             trigger="hover"
-                            src="./icons/info.json"
+                            src="./icons/expert.json"
                         />
-                        <p className="underIcon">База знаний</p>
+                        <p className="underIcon">Экспертные советы</p>
                     </Col>
                     <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
                         <lord-icon
                             class="big"
                             trigger="hover"
-                            src="./icons/expert.json"
+                            src="./icons/info.json"
                         />
-                        <p className="underIcon">Экспертные советы</p>
+                        <p className="underIcon">База знаний</p>
                     </Col>
                 </Row>
             </Drawer>

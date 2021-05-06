@@ -15,7 +15,7 @@ const bigPdf = {
     height: 170,
     background: "#d0dce8",
     clipPath: `polygon(20% 0%,80% 0%,100% 20%,100% 100%,80% 100%,20% 100%,0% 100%,0% 0%)`,
-    borderBottom: `solid 5px rgb(237 108 102)`
+    borderBottom: `solid 5px rgb(242 99 123)`
 }
 
 export default class Documents extends Component {

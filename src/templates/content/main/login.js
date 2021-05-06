@@ -2,6 +2,7 @@ import React from "react";
 import {Layer} from "react-parallax-scroll";
 import {Button, Col, Input, Row} from "antd";
 import Ran from "../../../img/ran.png";
+import Down from "../../../img/down.png";
 import Tilt from "react-parallax-tilt";
 import {setMenuLogin} from "../../menu/menuSlice";
 import {useDispatch} from "react-redux";
@@ -45,7 +46,7 @@ export default function Menu(props) {
                 </Row>
                 <Row justify="center">
                     <Col xs={22} sm={22} md={12} lg={12} xl={8} style={{textAlign: "center"}}>
-                        <br/><br/><br/>
+                        <br/><br/>
                         <Input
                             size="large"
                             className="password"
@@ -55,7 +56,7 @@ export default function Menu(props) {
                 </Row>
                 <Row justify="center">
                     <Col xs={22} sm={22} md={12} lg={12} xl={8} style={{textAlign: "center"}}>
-                        <br/><br/><br/>
+                        <br/><br/>
                         <div onClick={changeMenu}>
                             <Tilt
                                 glareEnable={true}
@@ -81,8 +82,14 @@ export default function Menu(props) {
                 </Row>
                 <Row justify="center">
                     <Col xs={22} sm={22} md={12} lg={12} xl={8} style={{textAlign: "center"}}>
-                        <br/><br/><br/>
-                        <p className="namePassword">Забыли пароль?</p>
+                        <br/><br/>
+                        <p className="forgotPassword">Забыли пароль?</p>
+                    </Col>
+                </Row>
+                <Row justify="center">
+                    <Col xs={22} sm={22} md={12} lg={12} xl={8} style={{textAlign: "center"}}>
+                        <br/><br/>
+                        <img className="arrowDown" src={Down} alt="?"/>
                     </Col>
                 </Row>
             </Layer>

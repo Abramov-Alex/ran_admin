@@ -2,7 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
 
 body {
+    color: #353535;
     overflow-x: hidden;
+}
+
+.ant-menu {
+    font-size: 15px;
 }
 
 .ant-layout-header {
@@ -69,10 +74,10 @@ body {
 .name {
     margin-top: 10%;
     text-align: center;
-    font-size: 23px;
+    font-size: 24px;
     color: white;
     font-weight: 100;
-    font-family: "Jura", sans-serif;
+    font-family: "Nunito", sans-serif;
 }
 
 .login {
@@ -180,6 +185,14 @@ body {
     text-align: center;
     color: white;
     font-size: 20px;
+    font-weight: 300;
+    font-family: "Nunito", sans-serif;
+}
+
+.forgotPassword {
+    text-align: center;
+    color: white;
+    font-size: 18px;
     font-weight: 300;
     font-family: "Nunito", sans-serif;
 }
@@ -340,16 +353,18 @@ body {
 .ant-menu-item-selected,
 .ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow,
 .ant-menu-vertical .ant-menu-submenu-selected{
-    color: #288788;
+    color: #3e89e2;
     transition: all 0.3s ease;
 }
 
 .ant-menu-inline .ant-menu-item::after {
-    border-right: 3px solid #288788;
+    border-right: 3px solid #3e89e2;
 }
 
-.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-    background-color: #e8f3e8;
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected,
+.ant-menu-item:active,
+.ant-menu-submenu-title:active {
+    background-color: aliceblue;
 }
 
 .menuIcons {
@@ -397,7 +412,7 @@ body {
 }
 
 .titleWhiteDiv {
-    color: #288788;
+    color: #445e7d;
     text-align: center;
     font-family: "Nunito", sans-serif;
     font-size: 17px;
@@ -452,7 +467,7 @@ label {
 
 .ant-menu-submenu-title .anticon,
 .ant-menu-item .anticon {
-    color: #288788;
+    color: #3e89e2;
 }
 
 .ant-menu-item a {
@@ -461,7 +476,7 @@ label {
 
 .ant-menu-item-selected a,
 .ant-menu-item:hover a {
-    color: #288788;
+    color: #3e89e2;
 }
 
 .antd-pro-charts-timeline-chart-timelineChart canvas {
@@ -494,7 +509,7 @@ label {
 
 .ant-alert,
 .ant-picker-calendar {
-    color: #444444;
+    color: #353535;
     font-family: "Nunito", sans-serif;
 }
 
@@ -502,7 +517,35 @@ label {
     text-indent: 1.5em;
     text-align: justify;
     margin-top: 20px;
-    font-size: 16px;
-    color: #444444;
+    font-size: 15px;
+    color: #353535;
     font-family: "Nunito", sans-serif;
+}
+
+.ant-image-img {
+    border-bottom: solid 5px #3e89e2;
+}
+
+.arrowDown {
+    margin-top: 10px;
+    height: 60px;
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+@-webkit-keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
 }
