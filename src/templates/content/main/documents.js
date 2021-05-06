@@ -4,11 +4,18 @@ import {Layer} from "react-parallax-scroll";
 import Tilt from "react-parallax-tilt";
 
 const bigDoc = {
-    width: 170,
+    width: 145,
     height: 170,
     background: "#d0dce8",
     clipPath: `polygon(20% 0%,80% 0%,100% 20%,100% 100%,80% 100%,20% 100%,0% 100%,0% 0%)`,
-    borderBottom: `solid 5px rgb(9 168 138)`
+    borderBottom: `solid 5px rgb(57 128 232)`
+}
+const bigPdf = {
+    width: 145,
+    height: 170,
+    background: "#d0dce8",
+    clipPath: `polygon(20% 0%,80% 0%,100% 20%,100% 100%,80% 100%,20% 100%,0% 100%,0% 0%)`,
+    borderBottom: `solid 5px rgb(237 108 102)`
 }
 
 export default class Documents extends Component {
@@ -41,7 +48,7 @@ export default class Documents extends Component {
                                 >
                                     <Tilt scale={1.1} transitionSpeed={2500}>
                                         <lord-icon
-                                            style={bigDoc}
+                                            style={bigPdf}
                                             trigger="hover"
                                             src="./icons/pdf.json"
                                         />
@@ -108,7 +115,7 @@ export default class Documents extends Component {
                                 >
                                     <Tilt scale={1.1} transitionSpeed={2500}>
                                         <lord-icon
-                                            style={bigDoc}
+                                            style={bigPdf}
                                             trigger="hover"
                                             src="./icons/pdf.json"
                                         />

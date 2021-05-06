@@ -112,12 +112,14 @@ export default class Dashboard extends Component {
                         >
                             <Row gutter={20}>
                                 <Col xs={24} sm={24} md={24} lg={24} xl={12}>
-                                    <div className="whiteDiv">
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Типы объектов экспертизы</p>
                                             </Col>
                                         </Row>
+                                    </div>
+                                    <div className="whiteDiv">
                                         <Pie
                                             hasLegend
                                             subTitle="Всего"
@@ -140,19 +142,21 @@ export default class Dashboard extends Component {
                                                     }}
                                                 />
                                             )}
-                                            height={350}
+                                            height={320}
                                         />
                                     </div>
                                 </Col>
                                 <Col xs={24} sm={24} md={24} lg={24} xl={12}>
-                                    <div className="whiteDiv">
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Поступления заключений по типам</p>
                                             </Col>
                                         </Row>
+                                    </div>
+                                    <div className="whiteDiv">
                                         <TimelineChart
-                                            height={330}
+                                            height={300}
                                             width={"100%"}
                                             data={chartData2}
                                             titleMap={{
@@ -163,12 +167,14 @@ export default class Dashboard extends Component {
                                     </div>
                                 </Col>
                                 <Col xs={24} sm={24} md={24} lg={24} xl={12}>
-                                    <div className="whiteDiv">
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Объекты экспертизы на разной стадии</p>
                                             </Col>
                                         </Row>
+                                    </div>
+                                    <div className="whiteDiv">
                                         <Pie
                                             hasLegend
                                             subTitle="Всего"
@@ -191,18 +197,20 @@ export default class Dashboard extends Component {
                                                     }}
                                                 />
                                             )}
-                                            height={350}
+                                            height={320}
                                         />
                                     </div>
                                 </Col>
                                 <Col xs={24} sm={24} md={24} lg={24} xl={12}>
-                                    <div className="whiteDiv">
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Финансирование по месяцам</p>
                                             </Col>
                                         </Row>
-                                        <Bar title='' height={360} data={salesData1}/>
+                                    </div>
+                                    <div className="whiteDiv">
+                                        <Bar title='' height={330} data={salesData1}/>
                                     </div>
                                 </Col>
                             </Row>

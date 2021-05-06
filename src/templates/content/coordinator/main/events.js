@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Alert, Calendar, Col, Layout, Row, Timeline} from "antd";
+import {Alert, Calendar, Col, Layout, Pagination, Row, Timeline} from "antd";
 import SiderMenu from './components/sider'
 
 const { Content } = Layout;
@@ -26,7 +26,7 @@ export default class Events extends Component {
                         >
                             <Row gutter={20}>
                                 <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '10px'}}>
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Последние события</p>
@@ -89,11 +89,14 @@ export default class Events extends Component {
                                                     </Timeline.Item>
                                                 </Timeline>
                                             </Col>
+                                            <Col span={24} style={{textAlign: 'center'}}>
+                                                <Pagination responsive={true} total={500} />
+                                            </Col>
                                         </Row>
                                     </div>
                                 </Col>
                                 <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '10px'}}>
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Календарь событий</p>

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Alert, Col, Image, Layout, Row, Timeline} from "antd";
+import {Alert, Col, Image, Layout, Row, Timeline, Pagination} from "antd";
 import {ClockCircleOutlined} from '@ant-design/icons';
 import SiderMenu from './components/sider'
 import news from '../../../../img/news.jpg'
@@ -25,12 +25,14 @@ export default class News extends Component {
                         >
                             <Row gutter={20}>
                                 <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                                    <div className="whiteDiv" style={{minHeight: '90vh'}}>
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Новости</p>
                                             </Col>
                                         </Row>
+                                    </div>
+                                    <div className="whiteDiv" style={{minHeight: '90vh'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p/>
@@ -93,16 +95,21 @@ export default class News extends Component {
                                                     </Timeline.Item>
                                                 </Timeline>
                                             </Col>
+                                            <Col span={24} style={{textAlign: 'center'}}>
+                                                <Pagination responsive={true} total={500} />
+                                            </Col>
                                         </Row>
                                     </div>
                                 </Col>
                                 <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                                    <div className="whiteDiv" style={{minHeight: '90vh'}}>
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Подробнее</p>
                                             </Col>
                                         </Row>
+                                    </div>
+                                    <div className="whiteDiv" style={{minHeight: '90vh'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <Image
