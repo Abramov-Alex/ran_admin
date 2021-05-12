@@ -7,6 +7,7 @@ import {defineLordIconElement} from "lord-icon-element";
 import {loadAnimation} from "lottie-web";
 import {useSelector} from "react-redux";
 import {menuLogin} from "./menuSlice";
+import citis from "../../img/citis.png"
 
 defineLordIconElement(loadAnimation);
 
@@ -53,17 +54,25 @@ function Menu() {
                 }}
             >
                 <Row>
-                    <Col xs={4} sm={3} md={3} lg={2} xl={2} className="headerBurger">
-                        <Hamburger
-                            rounded
-                            color="white"
-                            size={40}
-                            classNane="mainBurger"
-                            toggled={isOpen}
-                            toggle={setOpen}
-                            onToggle={onToggle}
-                        />
-                    </Col>
+                    {login ?
+                        <Col xs={15} sm={15} md={3} lg={2} xl={2} className="headerBurger">
+                            <Hamburger
+                                rounded
+                                color="white"
+                                size={40}
+                                classNane="mainBurger"
+                                toggled={isOpen}
+                                toggle={setOpen}
+                                onToggle={onToggle}
+                            />
+                        </Col>
+                        :
+                        <Col xs={4} sm={3} md={3} lg={2} xl={2} className="headerBurger">
+                            <a href="https://citis.ru/" target="_blank">
+                                <img className="citis" alt="?" src={citis} />
+                            </a>
+                        </Col>
+                    }
                     <Col xs={0} sm={0} md={0} lg={6} xl={5}>
                         <p className="nameMain">
                             <span className="nameOne">ИС НМРиЭД</span>{" "}
@@ -72,7 +81,7 @@ function Menu() {
                     </Col>
                     {login ?
                         <>
-                            <Col xs={14} sm={15} md={15} lg={12} xl={13}>
+                            <Col xs={0} sm={0} md={12} lg={10} xl={11}>
                                 <p className="cabinetName">
                                     Кабинет <span style={{fontWeight: 700}}>главного координатора</span>
                                 </p>
@@ -87,11 +96,20 @@ function Menu() {
                                 </Link>
                             </Col>
                             <Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">
-                                <Link to="/events">
+                                <Link to="/profile">
                                     <lord-icon
                                         style={menuIcon}
                                         trigger="hover"
                                         src="./icons/avatar.json"
+                                    />
+                                </Link>
+                            </Col>
+                            <Col xs={3} sm={3} md={3} lg={2} xl={2} className="menuBtn">
+                                <Link to="/information">
+                                    <lord-icon
+                                        style={menuIcon}
+                                        trigger="hover"
+                                        src="./icons/info.json"
                                     />
                                 </Link>
                             </Col>
@@ -141,6 +159,7 @@ function Menu() {
                 visible={visible}
                 height="100vh"
             >
+                <br/>
                 <br/>
                 <br/>
                 <br/>
@@ -223,7 +242,7 @@ function Menu() {
                         <lord-icon
                             class="big"
                             trigger="hover"
-                            src="./icons/info.json"
+                            src="./icons/question.json"
                         />
                         <p className="underIcon">База знаний</p>
                     </Col>

@@ -4,15 +4,15 @@ import {Layer} from "react-parallax-scroll";
 import Tilt from "react-parallax-tilt";
 
 const bigDoc = {
-    width: 145,
-    height: 170,
+    width: 130,
+    height: 155,
     background: "#d0dce8",
     clipPath: `polygon(20% 0%,80% 0%,100% 20%,100% 100%,80% 100%,20% 100%,0% 100%,0% 0%)`,
     borderBottom: `solid 5px rgb(57 128 232)`
 }
 const bigPdf = {
-    width: 145,
-    height: 170,
+    width: 130,
+    height: 155,
     background: "#d0dce8",
     clipPath: `polygon(20% 0%,80% 0%,100% 20%,100% 100%,80% 100%,20% 100%,0% 100%,0% 0%)`,
     borderBottom: `solid 5px rgb(242 99 123)`
@@ -41,10 +41,10 @@ export default class Documents extends Component {
                 <Row justify="center">
                     <Col xs={23} sm={22} md={20} lg={18} xl={18}>
                         <Layer settings={{speed: -0.05, type: 'translateX'}}>
-                            <Row style={{minHeight: '200px', margin: '70px 0 50px'}}>
+                            <Row style={{marginTop: '40px'}} className="divDocuments">
                                 <Col
                                     xs={24} sm={24} md={24} lg={8} xl={6}
-                                    style={{textAlign: "center", marginBottom: "20px"}}
+                                    style={{textAlign: "center"}}
                                 >
                                     <Tilt scale={1.1} transitionSpeed={2500}>
                                         <lord-icon
@@ -56,7 +56,7 @@ export default class Documents extends Component {
                                 </Col>
                                 <Col
                                     xs={24} sm={24} md={24} lg={16} xl={18}
-                                    style={{textAlign: "center", marginBottom: "20px"}}
+                                    style={{textAlign: "center"}}
                                 >
                                     <p
                                         className="underIconDoc"
@@ -70,7 +70,7 @@ export default class Documents extends Component {
                                     </p>
                                 </Col>
                             </Row>
-                            <Row style={{minHeight: '200px', margin: '50px 0 50px'}}>
+                            <Row className="divDocuments">
                                 <Col
                                     xs={24} sm={24} md={24} lg={8} xl={6}
                                     style={{textAlign: "center"}}
@@ -108,10 +108,10 @@ export default class Documents extends Component {
                                     </p>
                                 </Col>
                             </Row>
-                            <Row style={{minHeight: '200px', margin: '50px 0 50px'}}>
+                            <Row className="divDocuments">
                                 <Col
                                     xs={24} sm={24} md={24} lg={8} xl={6}
-                                    style={{textAlign: "center", marginBottom: "20px"}}
+                                    style={{textAlign: "center"}}
                                 >
                                     <Tilt scale={1.1} transitionSpeed={2500}>
                                         <lord-icon

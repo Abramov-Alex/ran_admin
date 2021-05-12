@@ -68,42 +68,46 @@ export default class Statistics extends Component {
                 <Row justify="center">
                     <Col span={18}>
                         <Layer settings={{speed: -0.1, type: 'translateY'}}>
-                            <Row>
-                                <Col xs={23} sm={22} md={22} lg={22} xl={11} style={{marginTop: "40px"}}>
-                                    <Pie
-                                        hasLegend
-                                        subTitle="Всего"
-                                        total={() => (
-                                            <span
-                                                dangerouslySetInnerHTML={{
-                                                    __html: salesPieData.reduce(
-                                                        (pre, now) =>
-                                                            now.y + pre,
-                                                        0
-                                                    ),
-                                                }}
-                                            />
-                                        )}
-                                        data={salesPieData}
-                                        valueFormat={(val) => (
-                                            <span
-                                                dangerouslySetInnerHTML={{
-                                                    __html: val,
-                                                }}
-                                            />
-                                        )}
-                                        height={260}
-                                    />
+                            <Row gutter={40}>
+                                <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+                                    <div className="greyDiv">
+                                        <Pie
+                                            hasLegend
+                                            subTitle="Всего"
+                                            total={() => (
+                                                <span
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: salesPieData.reduce(
+                                                            (pre, now) =>
+                                                                now.y + pre,
+                                                            0
+                                                        ),
+                                                    }}
+                                                />
+                                            )}
+                                            data={salesPieData}
+                                            valueFormat={(val) => (
+                                                <span
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: val,
+                                                    }}
+                                                />
+                                            )}
+                                            height={260}
+                                        />
+                                    </div>
                                 </Col>
-                                <Col xs={23} sm={23} md={21} lg={21} xl={10} offset={2}>
-                                    <TimelineChart
-                                        height={260}
-                                        data={chartData}
-                                        titleMap={{
-                                            y1: "Показатель 1",
-                                            y2: "Показатель 2",
-                                        }}
-                                    />
+                                <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+                                    <div className="greyDiv">
+                                        <TimelineChart
+                                            height={240}
+                                            data={chartData}
+                                            titleMap={{
+                                                y1: "Показатель 1",
+                                                y2: "Показатель 2",
+                                            }}
+                                        />
+                                    </div>
                                 </Col>
                             </Row>
                         </Layer>
@@ -111,10 +115,12 @@ export default class Statistics extends Component {
                         <Layer settings={{speed: 0.1, type: 'translateY'}}>
                             <Row
                                 justify="center"
-                                style={{marginTop: "120px"}}
+                                style={{marginTop: "80px"}}
                             >
-                                <Col span={20}>
-                                    <Bar title='' height={260} data={salesData}/>
+                                <Col span={24}>
+                                    <div className="greyDiv">
+                                        <Bar title='' height={260} data={salesData}/>
+                                    </div>
                                 </Col>
                             </Row>
                         </Layer>

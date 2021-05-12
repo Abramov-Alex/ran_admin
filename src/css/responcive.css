@@ -75,8 +75,8 @@
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .big {
-        width: 150px !important;
-        height: 150px !important;
+        width: 140px !important;
+        height: 140px !important;
     }
     .big:hover {
         width: 170px !important;

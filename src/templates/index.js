@@ -6,6 +6,8 @@ import {VerticalAlignTopOutlined} from "@ant-design/icons";
 import "ant-design-pro/dist/ant-design-pro.css";
 import Menu from './menu/menu'
 import Main from "./content/main";
+import Profile from "./content/profile"
+import Information from "./content/information"
 import Ptni from "./content/coordinator/expertise/ptni";
 import Events from "./content/coordinator/main/events";
 import Dashboard from "./content/coordinator/main/dashboard";
@@ -32,6 +34,12 @@ export default class Index extends Component {
                             {/*<Ptni />*/}
                             <Switch>
                                 <Route path="/" exact component={Main}/>
+                                <Route path="/profile" exact>
+                                    <Profile/>
+                                </Route>
+                                <Route path="/information" exact>
+                                    <Information/>
+                                </Route>
                                 <Route path="/events" exact>
                                     <Events/>
                                 </Route>
