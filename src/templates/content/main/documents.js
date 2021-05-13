@@ -40,7 +40,7 @@ export default class Documents extends Component {
                 </Layer>
                 <Row justify="center">
                     <Col xs={23} sm={22} md={20} lg={18} xl={18}>
-                        <Layer settings={{speed: -0.05, type: 'translateX'}}>
+                        <Layer className="animation"  settings={{speed: -0.05, type: 'translateX'}}>
                             <Row style={{marginTop: '40px'}} className="divDocuments">
                                 <Col
                                     xs={24} sm={24} md={24} lg={8} xl={6}

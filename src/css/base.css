@@ -66,12 +66,12 @@ body {
 }
 
 .mouse {
-    height: 40px;
-    margin-bottom: 7px;
+    height: 35px;
+    margin-bottom: 10px;
 }
 
 .arrowDown {
-    height: 50px;
+    height: 45px;
     animation: bounce 1s infinite alternate;
     -webkit-animation: bounce 1s infinite alternate;
 }
@@ -440,6 +440,10 @@ body {
     /*border: solid 1px #e6e6e6;*/
 }
 
+.statisticsDiv {
+    margin-top: 140px;
+}
+
 .greyDiv {
     background: whitesmoke;
     padding: 30px;
@@ -628,5 +632,10 @@ label {
 
 .citis {
     height: 21px;
-    margin-top: 12px;
+    margin-top: 11px;
+}
+
+.ant-picker-calendar-header {
+    padding: 12px 12px;
+    background: #f0f0f0;
 }

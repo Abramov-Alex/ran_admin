@@ -66,8 +66,8 @@ export default class Statistics extends Component {
                     </Row>
                 </Layer>
                 <Row justify="center">
-                    <Col span={18}>
-                        <Layer settings={{speed: -0.1, type: 'translateY'}}>
+                    <Col xs={23} sm={23} md={18} lg={18} xl={18}>
+                        <Layer className="animation" settings={{speed: -0.1, type: 'translateY'}}>
                             <Row gutter={40}>
                                 <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                                     <div className="greyDiv">
@@ -111,11 +111,10 @@ export default class Statistics extends Component {
                                 </Col>
                             </Row>
                         </Layer>
-                        <br/><br/><br/>
-                        <Layer settings={{speed: 0.1, type: 'translateY'}}>
+                        <Layer className="animation"  settings={{speed: 0.1, type: 'translateY'}}>
                             <Row
+                                className="statisticsDiv"
                                 justify="center"
-                                style={{marginTop: "80px"}}
                             >
                                 <Col span={24}>
                                     <div className="greyDiv">

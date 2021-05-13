@@ -25,6 +25,7 @@ export default class Contacts extends Component {
                         </Col>
                     </Row>
                 </Layer>
+                <br/><br/>
                 <Row justify="center">
                     <Col xs={23} sm={22} md={20} lg={18} xl={18}>
                         <Layer settings={{speed: 0.1, type: 'translateY'}}>
