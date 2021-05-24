@@ -7,7 +7,7 @@ import {defineLordIconElement} from "lord-icon-element";
 import {loadAnimation} from "lottie-web";
 import {useSelector} from "react-redux";
 import {menuLogin} from "./menuSlice";
-import citis from "../../img/citis.png"
+// import citis from "../../img/citis.png"
 
 defineLordIconElement(loadAnimation);
 
@@ -67,10 +67,10 @@ function Menu() {
                             />
                         </Col>
                         :
-                        <Col xs={4} sm={3} md={3} lg={2} xl={2} className="headerBurger">
-                            <a href="https://citis.ru/" target="_blank">
-                                <img className="citis" alt="?" src={citis} />
-                            </a>
+                        <Col span={1} className="headerBurger">
+                            {/*<a href="https://citis.ru/" target="_blank">*/}
+                            {/*    <img className="citis" alt="?" src={citis} />*/}
+                            {/*</a>*/}
                         </Col>
                     }
                     <Col xs={0} sm={0} md={0} lg={6} xl={5}>
@@ -115,7 +115,7 @@ function Menu() {
                             </Col>
                         </>
                         :
-                        <Col xs={20} sm={20} md={18} lg={{span: 9, offset: 7}} xl={{span: 8, offset: 9}}
+                        <Col xs={21} sm={22} md={22} lg={{span: 9, offset: 8}} xl={{span: 8, offset: 10}}
                              className="menuAnchor">
                             <NavHashLink
                                 activeClassName="selected"
@@ -197,12 +197,14 @@ function Menu() {
                         className="divIcon"
                         style={{textAlign: "center"}}
                     >
-                        <lord-icon
-                            class="big"
-                            trigger="hover"
-                            src="./icons/analytics.json"
-                        />
-                        <p className="underIcon">Аналитика</p>
+                        <a href="http://85.142.162.158:8899/db_analytics/" target="_blank">
+                            <lord-icon
+                                class="big"
+                                trigger="hover"
+                                src="./icons/analytics.json"
+                            />
+                            <p className="underIcon">Аналитика</p>
+                        </a>
                     </Col>
                     <Col xs={12} sm={12} md={12} lg={6} xl={6} style={{textAlign: "center"}}>
                         <lord-icon

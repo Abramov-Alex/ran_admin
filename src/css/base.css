@@ -78,7 +78,7 @@ body {
 
 .divArrow {
     position: absolute;
-    bottom: 40px;
+    bottom: 0;
     text-align: center;
     width: 100%;
 }
@@ -603,6 +603,13 @@ label {
     text-indent: 1.5em;
     text-align: justify;
     margin-top: 20px;
+    font-size: 15px;
+    color: #353535;
+    font-family: "Nunito", sans-serif;
+}
+
+.pDoc {
+    margin-bottom: 0;
     font-size: 15px;
     color: #353535;
     font-family: "Nunito", sans-serif;
