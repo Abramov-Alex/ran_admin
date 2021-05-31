@@ -38,7 +38,7 @@ export default class Ptni extends Component {
                         >
                             <Row gutter={20}>
                                 <Col span={24}>
-                                    <div className="whiteDiv" style={{padding: '10px', marginBottom: '2px'}}>
+                                    <div className="whiteDiv" style={{padding: '10px', marginBottom: '3px'}}>
                                         <Collapse className="filter" expandIconPosition="right" extra={genExtra()} onChange={callback}>
                                             <Panel header="Фильтры" key="1">
                                                 <Row gutter={10}>

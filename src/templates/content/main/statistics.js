@@ -68,7 +68,7 @@ export default class Statistics extends Component {
                 <Row justify="center">
                     <Col xs={23} sm={23} md={18} lg={18} xl={18}>
                         <Layer className="animation" settings={{speed: -0.1, type: 'translateY'}}>
-                            <Row gutter={40}>
+                            <Row>
                                 <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                                     <div className="greyDiv">
                                         <Pie

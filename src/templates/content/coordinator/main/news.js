@@ -25,7 +25,8 @@ export default class News extends Component {
                         >
                             <Row gutter={20}>
                                 <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '3' +
+                                            'px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Новости</p>
@@ -103,7 +104,7 @@ export default class News extends Component {
                                     </div>
                                 </Col>
                                 <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '3px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Подробнее</p>

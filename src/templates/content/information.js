@@ -234,7 +234,7 @@ export default class Ptni extends Component {
                                                 <Avatar size="small" icon={<SnippetsOutlined />}/>
                                             </Col>
                                             <Col xs={24} sm={24} md={19} lg={18} xl={20}>
-                                                <p className="pDoc">Автаризация в Системе и смена пользователя</p>
+                                                <p className="pDoc">Авторизация в Системе и смена пользователя</p>
                                             </Col>
                                             <Col xs={24} sm={24} md={5} lg={4} xl={3} style={{textAlign: 'center'}}>
                                                 <Button type="link">Открыть</Button>

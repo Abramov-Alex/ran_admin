@@ -9,6 +9,7 @@ body {
 
 .ant-menu {
     font-size: 15px;
+    font-family: 'Nunito';
 }
 
 .ant-layout-header {
@@ -23,7 +24,7 @@ body {
 .bgheader {
     background-color: black;
     height: 55px;
-    width: 105%;
+    width: 100%;
     z-index: 3;
     position: fixed;
     background: linear-gradient(
@@ -447,6 +448,7 @@ body {
 .greyDiv {
     background: whitesmoke;
     padding: 30px;
+    margin: 20px;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);

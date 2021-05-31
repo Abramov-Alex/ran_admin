@@ -112,7 +112,7 @@ export default class Dashboard extends Component {
                         >
                             <Row gutter={20}>
                                 <Col xs={24} sm={24} md={24} lg={24} xl={12}>
-                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '3px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Типы объектов экспертизы</p>
@@ -147,7 +147,7 @@ export default class Dashboard extends Component {
                                     </div>
                                 </Col>
                                 <Col xs={24} sm={24} md={24} lg={24} xl={12}>
-                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '3px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Поступления заключений по типам</p>
@@ -167,7 +167,7 @@ export default class Dashboard extends Component {
                                     </div>
                                 </Col>
                                 <Col xs={24} sm={24} md={24} lg={24} xl={12}>
-                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '3px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Объекты экспертизы на разной стадии</p>
@@ -202,7 +202,7 @@ export default class Dashboard extends Component {
                                     </div>
                                 </Col>
                                 <Col xs={24} sm={24} md={24} lg={24} xl={12}>
-                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '3px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Финансирование по месяцам</p>

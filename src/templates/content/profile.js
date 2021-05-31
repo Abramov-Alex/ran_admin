@@ -26,7 +26,7 @@ export default class Ptni extends Component {
                         >
                             <Row justify="center" gutter={20}>
                                 <Col span={24}>
-                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '2px'}}>
+                                    <div className="whiteDiv" style={{padding: '10px 10px 0', marginBottom: '3px'}}>
                                         <Row gutter={10}>
                                             <Col span={24}>
                                                 <p className="titleWhiteDiv">Профиль пользователя</p>
@@ -75,10 +75,10 @@ export default class Ptni extends Component {
                                         <Row justify="center">
                                             <Col span={12} style={{textAlign: 'center'}}>
                                                 <br/>
-                                                <Button type="primary">
+                                                <Button type="primary" style={{margin: '0 5px 5px 5px', width: '145px'}}>
                                                     Изменить пароль
                                                 </Button>
-                                                <Button style={{marginLeft: '10px'}}>
+                                                <Button style={{width: '145px'}}>
                                                     Добавить фото
                                                 </Button>
                                             </Col>
